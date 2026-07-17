@@ -528,7 +528,8 @@ section {
 
 .purchase-button,
 .help-button,
-.reset-button {
+.reset-button,
+.preset-button {
   padding: 10px 16px;
   border: 2px solid #a855f7;
   border-radius: 10px;
@@ -540,7 +541,8 @@ section {
 
 .purchase-button:hover,
 .help-button:hover,
-.reset-button:hover {
+.reset-button:hover,
+.preset-button:hover {
   background: rgba(56, 24, 88, 0.96);
 }
 

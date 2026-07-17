@@ -1,6 +1,7 @@
 const upgradeGrid = document.getElementById('upgrade-grid');
 const tooltip = document.getElementById('upgrade-tooltip');
 const resetButton = document.getElementById('reset-all');
+const presetButton = document.getElementById('preset');
 const purchaseItemsButton = document.getElementById('purchase-items');
 
 const currentMoneyInput = document.getElementById('current-money');
@@ -46,6 +47,28 @@ function saveState() {
     playerCount: settings.playerCount,
     partySize: settings.partySize,
     nothingCurse: settings.nothingCurse,
+    ownedUpgrades: Array.from(ownedUpgrades.entries()),
+  };
+
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  } catch (error) {
+    console.warn('Could not save state:', error);
+  }
+}
+
+function savePreset() {
+    ownedUpgrades.clear();
+    ownedUpgrades.set('Adrenaline', 1);
+    ownedUpgrades.set('Business License', 1);
+    ownedUpgrades.set('Paycheck', 2);
+    const state = {
+    currentMoney: 0,
+    currentLevel: 5,
+    difficulty: 'Standard',
+    playerCount: 1,
+    partySize: 'solo',
+    nothingCurse: false,
     ownedUpgrades: Array.from(ownedUpgrades.entries()),
   };
 
@@ -1088,6 +1111,13 @@ playerCountInput.addEventListener('input', () => {
 });
 
 purchaseItemsButton.addEventListener('click', purchaseSelectedItems);
+
+presetButton.addEventListener('click', () => {
+  savePreset();
+  loadState();
+  refreshUI();
+  saveState();
+});
 
 loadUpgrades();
 loadCurses();
