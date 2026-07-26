@@ -1,7 +1,7 @@
 const upgradeGrid = document.getElementById('upgrade-grid');
 const tooltip = document.getElementById('upgrade-tooltip');
 const resetButton = document.getElementById('reset-all');
-const presetButton = document.getElementById('preset');
+const presetSelect = document.getElementById('preset');
 const purchaseItemsButton = document.getElementById('purchase-items');
 
 const currentMoneyInput = document.getElementById('current-money');
@@ -57,26 +57,46 @@ function saveState() {
   }
 }
 
-function savePreset() {
-    ownedUpgrades.clear();
-    ownedUpgrades.set('Adrenaline', 1);
-    ownedUpgrades.set('Business License', 1);
-    ownedUpgrades.set('Paycheck', 2);
-    const state = {
-    currentMoney: 0,
-    currentLevel: 5,
-    difficulty: 'Standard',
-    playerCount: 1,
-    partySize: 'solo',
-    nothingCurse: false,
-    ownedUpgrades: Array.from(ownedUpgrades.entries()),
-  };
+function loadPreset() {
+  
+    switch (presetSelect.value) {
+      case 'default-preset':
 
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  } catch (error) {
-    console.warn('Could not save state:', error);
-  }
+        if (partySizeSelect.value === 'solo' || partySizeSelect.value === 'duo') {
+        ownedUpgrades.set('Paycheck', 1);
+        }
+
+        currentLevelInput.value = '3';
+
+        break;
+      case 'solo-preset':
+        currentLevelInput.value = '5';
+        playerCountInput.value = '1';
+        partySizeSelect.value = 'solo';
+
+        ownedUpgrades.set('Adrenaline', 1);
+        ownedUpgrades.set('Business License', 1);
+        ownedUpgrades.set('Paycheck', 2);
+        break;
+      case 'duo-preset':
+        currentLevelInput.value = '5';
+        playerCountInput.value = '2';
+        partySizeSelect.value = 'duo';
+
+        ownedUpgrades.set('Business License', 1);
+        ownedUpgrades.set('Paycheck', 2);
+        break;
+      case 'party-preset':
+        currentLevelInput.value = '5';
+        if (Number(playerCountInput.value < 3)) {
+          playerCountInput.value = '3';
+        }
+        partySizeSelect.value = 'party';
+
+        ownedUpgrades.set('Paycheck', 1);
+        break;
+
+      }
 }
 
 function loadState() {
@@ -119,20 +139,14 @@ resetButton.addEventListener('click', () => {
 
   ownedUpgrades.clear();
 
-  if (partySizeSelect.value === 'solo' || partySizeSelect.value === 'duo') {
-  ownedUpgrades.set('Paycheck', 1);
-}
-
   setSharedGoldenGifts(0);
-  currentLevelInput.value = '3';
-  //playerCountInput.value = '1';
-  //difficultySelect.value = 'Standard';
-  //partySizeSelect.value = 'solo';
-  nothingCurseInput.checked = false;
 
+  nothingCurseInput.checked = false;
   selectedShopItems.clear();
   selectedPurificationItems.clear();
   selectedAltars.clear();
+
+  loadPreset();
 
   refreshUI();
   saveState();
@@ -1111,13 +1125,6 @@ playerCountInput.addEventListener('input', () => {
 });
 
 purchaseItemsButton.addEventListener('click', purchaseSelectedItems);
-
-presetButton.addEventListener('click', () => {
-  savePreset();
-  loadState();
-  refreshUI();
-  saveState();
-});
 
 loadUpgrades();
 loadCurses();

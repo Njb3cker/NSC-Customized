@@ -529,7 +529,7 @@ section {
 .purchase-button,
 .help-button,
 .reset-button,
-.preset-button {
+.preset-select {
   padding: 10px 16px;
   border: 2px solid #a855f7;
   border-radius: 10px;
