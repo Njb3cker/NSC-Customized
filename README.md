@@ -1,4 +1,4 @@
-# Nullscape Shop Calculator
+# Nullscape Shop Calculator Customized
 
 Web tool to help plan Nullscape shop purchases and upgrades.
 
@@ -14,3 +14,5 @@ Web tool to help plan Nullscape shop purchases and upgrades.
   - Lets you click items to simulate buying them.
   - Updates remaining Golden Gifts as you plan purchases.
   - Marks unaffordable choices in red.
+- Presets:
+  - Start the calculator partway through runs with predicted purchases.
