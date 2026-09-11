@@ -296,14 +296,6 @@
     "minLevel": 8
   },
   {
-    "name": "Radar Module: Players",
-    "description": "Highlights other players every 12 seconds.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/0/08/RadarModulePlayers.png/84px-RadarModulePlayers.png",
-    "cost": 150,
-    "max": 1,
-    "minLevel": 8
-  },
-  {
     "name": "Subspacial Barrier",
     "description": "Allows you take an extra hit from Tripmines and Void Implosions.",
     "image": "https://static.wikitide.net/nullscapewiki/thumb/0/02/SubspacialBarrier.png/84px-SubspacialBarrier.png",
