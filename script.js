@@ -1028,7 +1028,7 @@ function renderAltarShop() {
 
     card.innerHTML = `
       <div class="shop-card-image">
-        <img src="https://static.wikitide.net/nullscapewiki/thumb/6/61/MoreAltars.png/84px-MoreAltars.png" alt="Protection Altar" loading="lazy">
+        <img src="assets/more-altars.png" alt="Protection Altar" loading="lazy">
       </div>
       <div class="shop-card-content">
         <h3>Level ${item.level}</h3>

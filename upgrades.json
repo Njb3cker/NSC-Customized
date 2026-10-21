@@ -2,7 +2,7 @@
   {
     "name": "Business License",
     "description": "﹢25% Golden Gift yield.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/9/97/BusinessLicense.png/84px-BusinessLicense.png",
+    "image": "assets/business-license.png",
     "cost": 75,
     "stackCosts": [75, 187.5, 187.5],
     "max": 2,
@@ -11,7 +11,7 @@
   {
     "name": "Paycheck",
     "description": "Gain ﹢40 (﹢10 per beaconed player) Golden Gifts every round if half or more of the players survive.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/a/a9/Paycheck.png/84px-Paycheck.png",
+    "image": "assets/paycheck.png",
     "cost": 55,
     "max": 5,
     "minLevel": 3
@@ -19,7 +19,7 @@
   {
     "name": "Swiftness Ring",
     "description": "﹢10% Movement speed (Max 30%).",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/8/80/SwiftnessRing.png/84px-SwiftnessRing.png",
+    "image": "assets/swiftness-ring.png",
     "cost": 80,
     "max": 3,
     "minLevel": 3
@@ -27,7 +27,7 @@
   {
     "name": "Radar",
     "description": "Arrow always appears and highlights all nearby gifts.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/4/46/Radar.png/84px-Radar.png",
+    "image": "assets/radar.png",
     "cost": 175,
     "max": 1,
     "minLevel": 5
@@ -35,7 +35,7 @@
   {
     "name": "Better Jump Pads",
     "description": "More Jump Pads with less random positions.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/1/1c/BetterJumpPads.png/84px-BetterJumpPads.png",
+    "image": "assets/better-jump-pads.png",
     "cost": 50,
     "max": 1,
     "minLevel": 5
@@ -43,7 +43,7 @@
   {
     "name": "Double Jump",
     "description": "Allows you to double jump.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/0/01/DoubleJump.png/84px-DoubleJump.png",
+    "image": "assets/double-jump.png",
     "cost": 150,
     "max": 1,
     "minLevel": 5
@@ -51,7 +51,7 @@
   {
     "name": "Tria Orbs",
     "description": "Makes Orbs appear around the map, Orbs boost you after jumping out of them.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/f/f7/TriaOrbs.png/84px-TriaOrbs.png",
+    "image": "assets/tria-orbs.png",
     "cost": 100,
     "max": 1,
     "minLevel": 5
@@ -59,7 +59,7 @@
   {
     "name": "Medal",
     "description": "If the level is odd, on collapse, the Medal spawns, bring it to the beacon for Golden Gifts and if the next level is an intermission, get the option to pick a difficult curse for Golden Gifts. Carrying it gives an extra double jump but disables abilities.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/b/b7/Medal.png/84px-Medal.png",
+    "image": "assets/medal.png",
     "cost": 100,
     "max": 1,
     "minLevel": 5
@@ -67,7 +67,7 @@
   {
     "name": "Grace Wings",
     "description": "Greatly enhances air control.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/5/5d/GraceWings.png/84px-GraceWings.png",
+    "image": "assets/grace-wings.png",
     "cost": 300,
     "max": 1,
     "minLevel": 8,
@@ -76,7 +76,7 @@
   {
     "name": "Grapple Points",
     "description": "Harder to reach Jump Pads that are smaller, with a more powerful boost.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/c/ca/GrapplePoints.png/84px-GrapplePoints.png",
+    "image": "assets/grapple-points.png",
     "cost": 100,
     "max": 1,
     "minLevel": 5
@@ -84,7 +84,7 @@
   {
     "name": "Pocket Bell",
     "description": "An extra double jump.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/1/13/Pocket_Bell.png/84px-Pocket_Bell.png",
+    "image": "assets/pocket-bell.png",
     "cost": 300,
     "max": 1,
     "minLevel": 8
@@ -92,7 +92,7 @@
   {
     "name": "Radar Module: Enemies",
     "description": "Tracks enemies through walls.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/b/bd/RadarModuleEnemies.png/84px-RadarModuleEnemies.png",
+    "image": "assets/radar-module-enemies.png",
     "cost": 200,
     "max": 1,
     "minLevel": 8
@@ -100,7 +100,7 @@
   {
     "name": "Radar Module: Altars",
     "description": "Marks the location of all unused altars every 12 seconds.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/a/af/RadarModuleAltars.png/84px-RadarModuleAltars.png",
+    "image": "assets/radar-module-altars.png",
     "cost": 300,
     "max": 1,
     "minLevel": 8
@@ -108,7 +108,7 @@
   {
     "name": "Advanced Gravity Coil",
     "description": "25% Increased maximum jump height. Controllable jump height. Hold space to jump higher, tap space to jump lightly.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/4/43/AdvancedGravityCoil.png/84px-AdvancedGravityCoil.png",
+    "image": "assets/advanced-gravity-coil.png",
     "cost": 600,
     "max": 1,
     "minLevel": 8
@@ -116,7 +116,7 @@
   {
     "name": "Ice Skates",
     "description": "Less slipping on ice. Going in one direction for a while slowly gives a speed boost.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/d/d1/IceSkates.png/84px-IceSkates.png",
+    "image": "assets/ice-skates.png",
     "cost": 400,
     "max": 1,
     "minLevel": 8,
@@ -125,7 +125,7 @@
   {
     "name": "Fanny Pack",
     "description": "During collapse, some tiles turn yellow. Collecting all gifts from these tiles gives bonus Golden Gifts.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/f/f7/FannyPack.png/84px-FannyPack.png",
+    "image": "assets/fanny-pack.png",
     "cost": 300,
     "max": 1,
     "minLevel": 8
@@ -133,7 +133,7 @@
   {
     "name": "Helmet",
     "description": "Bonking sends you upwards and allows full control.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/3/37/Helmet.png/84px-Helmet.png",
+    "image": "assets/helmet.png",
     "cost": 400,
     "max": 1,
     "minLevel": 8
@@ -141,7 +141,7 @@
   {
     "name": "More Altars",
     "description": "Spawns an extra altar.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/6/61/MoreAltars.png/84px-MoreAltars.png",
+    "image": "assets/more-altars.png",
     "cost": 600,
     "max": 1,
     "minLevel": 10
@@ -149,7 +149,7 @@
   {
     "name": "Ninja Belt",
     "description": "Gives the player a unique buff according to their class.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/5/59/NinjaBelt.png/84px-NinjaBelt.png",
+    "image": "assets/ninja-belt.png",
     "cost": 700,
     "costCasual": 500,
     "max": 1,
@@ -159,7 +159,7 @@
   {
     "name": "Larger Grapple Points",
     "description": "Grapple Points are 25% larger.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/3/3a/LargerGrapplePoints.png/84px-LargerGrapplePoints.png",
+    "image": "assets/larger-grapple-points.png",
     "cost": 500,
     "max": 1,
     "minLevel": 13
@@ -167,7 +167,7 @@
   {
     "name": "Shark Tail",
     "description": "Gives the player a unique buff according to their class.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/5/50/SharkTail.png/84px-SharkTail.png",
+    "image": "assets/shark-tail.png",
     "cost": 1200,
     "costCasual": 800,
     "costExtreme": 1500,
@@ -177,7 +177,7 @@
   {
     "name": "Gift Magnet",
     "description": "Increases pickup range by .5 studs. (Max 1.5 studs)",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/f/f0/GiftMagnet.png/84px-GiftMagnet.png",
+    "image": "assets/gift-magnet.png",
     "cost": 1500,
     "stackCosts": [1500, 2100, 2700, 2700],
     "stackCostsCasual": [750, 1050, 1350, 1350],
@@ -188,7 +188,7 @@
   {
     "name": "Matrix Tetrahedron",
     "description": "Instant Acceleration. Completely Removes the slippery/icey movement.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/b/b6/MatrixTetrahedron.png/84px-MatrixTetrahedron.png",
+    "image": "assets/matrix-tetrahedron.png",
     "cost": 2500,
     "costCasual": 1500,
     "costExtreme": 3000,
@@ -198,7 +198,7 @@
   {
     "name": "Sport Shoes",
     "description": "﹢40% Movement speed.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/2/2f/SportShoes.png/84px-SportShoes.png",
+    "image": "assets/sport-shoes.png",
     "cost": 1350,
     "costCasual": 1000,
     "costExtreme": 1600,
@@ -208,7 +208,7 @@
   {
     "name": "Shield",
     "description": "Allows you to take an extra hit. Doesn't protect you from the Void.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/c/cf/Shield.png/84px-Shield.png",
+    "image": "assets/shield.png",
     "cost": 4000,
     "costCasual": 2000,
     "costExtreme": 5000,
@@ -219,7 +219,7 @@
   {
     "name": "Radar Module: Instruments",
     "description": "Marks the location of Cadence's instruments every 12 seconds and gives you an arrow pointing towards instruments.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/9/9a/RadarModuleInstruments.png/84px-RadarModuleInstruments.png",
+    "image": "assets/radar-module-instruments.png",
     "cost": 1000,
     "max": 1,
     "minLevel": 15
@@ -227,7 +227,7 @@
   {
     "name": "Panic Necklace",
     "description": "When your last shield breaks, gain debuff immunity, movement speed and ﹢2 pickup range for 40 seconds.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/1/1f/PanicNecklace.png/84px-PanicNecklace.png",
+    "image": "assets/panic-necklace.png",
     "cost": 3000,
     "costCasual": 1500,
     "max": 1,
@@ -236,7 +236,7 @@
   {
     "name": "Miniature Hourglass",
     "description": "Gives the player a unique buff according to their class.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/d/dd/MiniatureHourglass.png/84px-MiniatureHourglass.png",
+    "image": "assets/miniature-hourglass.png",
     "cost": 3000,
     "costCasual": 1500,
     "max": 1,
@@ -245,7 +245,7 @@
   {
     "name": "Gift Idol",
     "description": "Collecting gifts has a ﹢1% chance to collect nearby gifts.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/8/81/GiftIdol.png/84px-GiftIdol.png",
+    "image": "assets/gift-idol.png",
     "cost": 4000,
     "costCasual": 3000,
     "stackCosts": [4000, 8000, 12000, 16000, 20000, 20000],
@@ -257,7 +257,7 @@
   {
     "name": "Drowned Ægis",
     "description": "Altar of Protection also gives a one time Void shield that teleports you out of the Void.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/b/be/Drowned%C3%86gis.png/84px-Drowned%C3%86gis.png",
+    "image": "assets/drowned-aegis.png",
     "cost": 6000,
     "costCasual": 4000,
     "max": 1,
@@ -266,7 +266,7 @@
   {
     "name": "Adrenaline",
     "description": "﹢20% Movement speed.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/e/e3/Adrenaline.png/84px-Adrenaline.png",
+    "image": "assets/adrenaline.png",
     "cost": 50,
     "max": 1,
     "minLevel": 3
@@ -274,7 +274,7 @@
   {
     "name": "Defuse Kit",
     "description": "﹢20% Chance for Tripmines to not explode. (Max 60%)",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/1/13/DefuseKit.png/84px-DefuseKit.png",
+    "image": "assets/defuse-kit.png",
     "cost": 30,
     "max": 3,
     "minLevel": 5
@@ -282,7 +282,7 @@
   {
     "name": "Last Robloxian Standing",
     "description": "Gain a movement speed boost, 4 seconds of invincibility, and a shield when you are the last one alive.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/f/f2/LastRobloxianStanding.png/84px-LastRobloxianStanding.png",
+    "image": "assets/last-robloxian-standing.png",
     "cost": 300,
     "max": 1,
     "minLevel": 5
@@ -290,7 +290,7 @@
   {
     "name": "Radar Module: Tripmines",
     "description": "Highlights all nearby Tripmines.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/1/14/RadarModuleTripmines.png/84px-RadarModuleTripmines.png",
+    "image": "assets/radar-module-tripmines.png",
     "cost": 400,
     "max": 1,
     "minLevel": 8
@@ -298,7 +298,7 @@
   {
     "name": "Subspacial Barrier",
     "description": "Allows you take an extra hit from Tripmines and Void Implosions.",
-    "image": "https://static.wikitide.net/nullscapewiki/thumb/0/02/SubspacialBarrier.png/84px-SubspacialBarrier.png",
+    "image": "assets/subspacial-barrier.png",
     "cost": 1000,
     "stackCostsSolo": [500, 1500, 1500],
     "stackCosts": [1000, 3000, 3000],
