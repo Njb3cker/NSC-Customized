@@ -5,7 +5,7 @@ import {
   playerCountInput,
   partySizeSelect,
   nothingCurseInput,
-  dependanceDelusionInput,
+  dependenceDelusionInput,
 } from './dom.js';
 
 function readPlayerCount() {
@@ -21,7 +21,7 @@ export function getCurrentSettings() {
     playerCount: readPlayerCount(),
     partySize: partySizeSelect.value,
     nothingCurse: nothingCurseInput.checked,
-    dependanceDelusion: dependanceDelusionInput.checked,
+    dependenceDelusion: dependenceDelusionInput.checked,
   };
 }
 
@@ -32,7 +32,7 @@ export function applySettings(state) {
   partySizeSelect.value = state.partySize ?? 'solo';
   playerCountInput.value = state.playerCount ?? '';
   nothingCurseInput.checked = Boolean(state.nothingCurse);
-  dependanceDelusionInput.checked = Boolean(state.dependanceDelusion);
+  dependenceDelusionInput.checked = Boolean(state.dependenceDelusion);
 }
 
 export function setSharedGoldenGifts(value) {
@@ -47,7 +47,7 @@ export function resetRunSettings() {
   setSharedGoldenGifts(0);
   currentLevelInput.value = '3';
   nothingCurseInput.checked = false;
-  dependanceDelusionInput.checked = false;
+  dependenceDelusionInput.checked = false;
 }
 
 export function isSoloOrDuoSelected() {

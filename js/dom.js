@@ -18,7 +18,7 @@ export const shopMoney = byId('shop-money');
 export const altarShopSection = byId('altar-shop-section');
 export const altarShopGrid = byId('altar-shop-grid');
 export const altarShopMoney = byId('altar-shop-money');
-export const dependanceDelusionInput = byId('dependance-delusion');
+export const dependenceDelusionInput = byId('dependence-delusion');
 
 export const purificationShopSection = byId('purification-shop-section');
 export const purificationShopGrid = byId('purification-shop-grid');

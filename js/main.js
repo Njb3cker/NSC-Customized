@@ -6,7 +6,7 @@ import {
   currentMoneyInput,
   currentLevelInput,
   nothingCurseInput,
-  dependanceDelusionInput,
+  dependenceDelusionInput,
   playerCountInput,
   difficultySelect,
   partySizeSelect,
@@ -84,7 +84,7 @@ async function loadCurses() {
   }
 }
 
-[currentMoneyInput, currentLevelInput, nothingCurseInput, dependanceDelusionInput, difficultySelect, partySizeSelect].forEach((input) => {
+[currentMoneyInput, currentLevelInput, nothingCurseInput, dependenceDelusionInput, difficultySelect, partySizeSelect].forEach((input) => {
   input.addEventListener('input', update);
 });
 
