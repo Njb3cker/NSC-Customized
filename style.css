@@ -404,6 +404,16 @@ section {
   font-weight: 700;
 }
 
+.dependance-actions .curse-control img {
+  width: 48px;
+  height: 48px;
+}
+
+/* The lock note takes the Dependance toggle's top-right spot while altars are locked. */
+.shop.shop-locked .dependance-actions {
+  visibility: hidden;
+}
+
 .shop.shop-locked .shop-grid,
 .shop.shop-locked .shop-header,
 .shop.shop-locked .shop-actions,
