@@ -305,5 +305,77 @@
     "max": 2,
     "minLevel": 13,
     "minLevelCasual": 15
+  },
+  {
+    "name": "Birthday Pony",
+    "description": "Springer will collect any gifts it lands on.",
+    "image": "assets/placeholder.png",
+    "cost": 0,
+    "max": 1,
+    "minLevel": 1
+  },
+  {
+    "name": "Star Marts",
+    "description": "Star Marts will start appearing throughout the level, being bright blue stars. Touching one gives speed, gift pickup range and a debuff immunity.",
+    "image": "assets/placeholder.png",
+    "cost": 0,
+    "max": 1,
+    "minLevel": 1
+  },
+  {
+    "name": "Aggro Magnet",
+    "description": "Increases the gift range of the player for every enemy that is targetting them.",
+    "image": "assets/placeholder.png",
+    "cost": 0,
+    "max": 1,
+    "minLevel": 1
+  },
+  {
+    "name": "Debuff Magnet",
+    "description": "Increases the gift range of the player for every active debuff.",
+    "image": "assets/placeholder.png",
+    "cost": 0,
+    "max": 1,
+    "minLevel": 1
+  },
+  {
+    "name": "Jet Boosters",
+    "description": "Double jumps will now redirect all the momentum on wherever the player is looking.",
+    "image": "assets/placeholder.png",
+    "cost": 0,
+    "max": 1,
+    "minLevel": 1
+  },
+  {
+    "name": "Propeller Hat",
+    "description": "Allows double jumping while bonked. Uses all the double jumps in the process.",
+    "image": "assets/placeholder.png",
+    "cost": 0,
+    "max": 1,
+    "minLevel": 1
+  },
+  {
+    "name": "Shadow Cloak",
+    "description": "Lets the player move through small tile decorations, other players and Springer.",
+    "image": "assets/placeholder.png",
+    "cost": 0,
+    "max": 1,
+    "minLevel": 1
+  },
+  {
+    "name": "Soul Tracers",
+    "description": "Players will drop soul tracers on death, when collected, they will give golden gift yield.",
+    "image": "assets/placeholder.png",
+    "cost": 0,
+    "max": 1,
+    "minLevel": 1
+  },
+  {
+    "name": "Spring Shoes",
+    "description": "Gives 1.4x jump height to the player while quick turning.",
+    "image": "assets/placeholder.png",
+    "cost": 0,
+    "max": 1,
+    "minLevel": 1
   }
 ]
