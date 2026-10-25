@@ -326,7 +326,7 @@
     "name": "Aggro Magnet",
     "description": "Increases the gift collection range by ﹢0.1 studs for every enemy targeting you.",
     "image": "assets/aggro-magnet.png",
-    "cost": 0,
+    "cost": 2800,
     "max": 1,
     "minLevel": 15
   },
@@ -334,7 +334,7 @@
     "name": "Debuff Magnet",
     "description": "Increases the gift collection range by ﹢0.25 studs if you have a debuff and the range gets multiplied by 2x for each additional debuff you have.",
     "image": "assets/debuff-magnet.png",
-    "cost": 0,
+    "cost": 2800,
     "max": 1,
     "minLevel": 15
   },
@@ -400,7 +400,7 @@
     "image": "assets/fleeting-fate.png",
     "cost": 2500,
     "max": 1,
-    "minLevel": 20
+    "minLevel": 18
   },
   {
     "name": "Magnified Levels",
