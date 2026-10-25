@@ -502,6 +502,7 @@ section {
 
 .bottom-gif {
   margin-top: 24px;
+  gap: 24px;
   display: flex;
   justify-content: center;
 }
