@@ -125,9 +125,10 @@
     "description": "Less slipping on ice. Going in one direction for a while slowly gives a speed boost.",
     "image": "assets/ice-skates.png",
     "cost": 350,
+    "costSolo": 300,
+    "costCasual": 300,
     "max": 1,
-    "minLevel": 8,
-    "costSolo": 300
+    "minLevel": 8
   },
   {
     "name": "Fanny Pack",
@@ -219,11 +220,10 @@
     "description": "Allows you to take an extra hit. Doesn't protect you from the Void.",
     "image": "assets/shield.png",
     "cost": 4000,
+    "costSolo": 1000,
     "costCasual": 2000,
-    "costExtreme": 5000,
     "max": 1,
-    "minLevel": 15,
-    "costSolo": 1000
+    "minLevel": 15
   },
   {
     "name": "Radar Module: Instruments",
@@ -255,9 +255,7 @@
     "name": "Gift Idol",
     "description": "Collecting gifts has a ﹢1% chance to collect nearby gifts.",
     "image": "assets/gift-idol.png",
-    "cost": 4000,
-    "costCasual": 3000,
-    "stackCosts": [4000, 8000, 12000, 16000, 20000, 20000],
+    "stackCosts": [3500, 7000, 10500, 14000, 17500, 17500],
     "stackCostsCasual": [3000, 6000, 9000, 12000, 15000, 15000],
     "stackCostsExtreme": [5000, 10000, 15000, 20000, 25000, 25000],
     "max": 5,
@@ -336,6 +334,7 @@
     "description": "Increases the gift collection range by ﹢0.1 studs for every enemy targeting you.",
     "image": "assets/aggro-magnet.png",
     "cost": 2800,
+    "costCasual": 1700,
     "max": 1,
     "minLevel": 15
   },
@@ -344,6 +343,7 @@
     "description": "Increases the gift collection range by ﹢0.25 studs if you have a debuff and the range gets multiplied by 2x for each additional debuff you have.",
     "image": "assets/debuff-magnet.png",
     "cost": 2800,
+    "costCasual": 1700,
     "max": 1,
     "minLevel": 15
   },
@@ -409,6 +409,7 @@
     "description": "Upon entering collapse, gain ﹢40% movement speed, increased gift collection range and debuff immunity for 40 seconds.",
     "image": "assets/fleeting-fate.png",
     "cost": 2500,
+    "costCasual": 1750,
     "max": 1,
     "minLevel": 18
   },
