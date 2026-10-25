@@ -4,7 +4,7 @@
     "description": "﹢25% Golden Gift yield.",
     "image": "assets/business-license.png",
     "cost": 75,
-    "stackCosts": [75, 187.5, 187.5],
+    "stackCosts": [75, 160, 160],
     "max": 2,
     "minLevel": 3
   },
@@ -28,7 +28,7 @@
     "name": "Radar",
     "description": "Arrow always appears and highlights all nearby gifts.",
     "image": "assets/radar.png",
-    "cost": 175,
+    "cost": 150,
     "max": 1,
     "minLevel": 5
   },
@@ -109,7 +109,7 @@
     "name": "Advanced Gravity Coil",
     "description": "25% Increased maximum jump height. Controllable jump height. Hold space to jump higher, tap space to jump lightly.",
     "image": "assets/advanced-gravity-coil.png",
-    "cost": 600,
+    "cost": 650,
     "max": 1,
     "minLevel": 8
   },
@@ -117,7 +117,7 @@
     "name": "Ice Skates",
     "description": "Less slipping on ice. Going in one direction for a while slowly gives a speed boost.",
     "image": "assets/ice-skates.png",
-    "cost": 400,
+    "cost": 350,
     "max": 1,
     "minLevel": 8,
     "costSolo": 300
@@ -134,7 +134,7 @@
     "name": "Helmet",
     "description": "Bonking sends you upwards and allows full control.",
     "image": "assets/helmet.png",
-    "cost": 400,
+    "cost": 350,
     "max": 1,
     "minLevel": 8
   },
@@ -305,5 +305,125 @@
     "max": 2,
     "minLevel": 13,
     "minLevelCasual": 15
+  },
+  {
+    "name": "Birthday Pony",
+    "description": "Springer collects gifts it lands on.",
+    "image": "assets/birthday-pony.png",
+    "cost": 350,
+    "max": 1,
+    "minLevel": 10
+  },
+  {
+    "name": "Star Marts",
+    "description": "Star Marts can now spawn in the level. Touching a Star Mart will give movement speed, ﹢2 gift collection range and debuff immunity for 25 seconds.",
+    "image": "assets/star-marts.png",
+    "cost": 450,
+    "max": 1,
+    "minLevel": 8
+  },
+  {
+    "name": "Aggro Magnet",
+    "description": "Increases the gift collection range by ﹢0.1 studs for every enemy targeting you.",
+    "image": "assets/aggro-magnet.png",
+    "cost": 0,
+    "max": 1,
+    "minLevel": 15
+  },
+  {
+    "name": "Debuff Magnet",
+    "description": "Increases the gift collection range by ﹢0.25 studs if you have a debuff and the range gets multiplied by 2x for each additional debuff you have.",
+    "image": "assets/debuff-magnet.png",
+    "cost": 0,
+    "max": 1,
+    "minLevel": 15
+  },
+  {
+    "name": "Jet Boosters",
+    "description": "Double jumps redirect momentum towards where you're going.",
+    "image": "assets/jet-boosters.png",
+    "cost": 0,
+    "max": 1,
+    "minLevel": 25
+  },
+  {
+    "name": "Propeller Hat",
+    "description": "Allows you to double jump while bonked, but instantly uses all available jumps. Ringing Bell and getting hit by Springer's shockwaves now replenish double jumps.",
+    "image": "assets/propeller-hat.png",
+    "cost": 750,
+    "max": 1,
+    "minLevel": 15
+  },
+  {
+    "name": "Shadow Cloak",
+    "description": "Lets you phase through players, small tile decorations and mid-air Springers.",
+    "image": "assets/shadow-cloak.png",
+    "cost": 2500,
+    "max": 1,
+    "minLevel": 20
+  },
+  {
+    "name": "Soul Tracers",
+    "description": "Whenever a player dies, they drop an orb and increase the Golden Gift yield, collecting the orb further increases the Golden Gift yield.",
+    "image": "assets/soul-tracers.png",
+    "cost": 1000,
+    "max": 1,
+    "minLevel": 15
+  },
+  {
+    "name": "Spring Shoes",
+    "description": "1.4x jump height while quick turning or standing still.",
+    "image": "assets/spring-shoes.png",
+    "cost": 100,
+    "max": 1,
+    "minLevel": 8
+  },
+  {
+    "name": "Altar Boons",
+    "description": "Paycheck's reward increases by ﹢20% for each Altar used during the level.",
+    "image": "assets/altar-boons.png",
+    "stackCosts": [525, 1250, 1250],
+    "max": 2,
+    "minLevel": 8
+  },
+  {
+    "name": "Health Insurance",
+    "description": "Paycheck always triggers.",
+    "image": "assets/health-insurance.png",
+    "cost": 500,
+    "max": 1,
+    "minLevel": 8
+  },
+  {
+    "name": "Fleeting Fate",
+    "description": "Upon entering collapse, gain ﹢40% movement speed, increased gift collection range and debuff immunity for 40 seconds.",
+    "image": "assets/fleeting-fate.png",
+    "cost": 2500,
+    "max": 1,
+    "minLevel": 20
+  },
+  {
+    "name": "Magnified Levels",
+    "description": "Makes levels smaller.",
+    "image": "assets/magnified-levels.png",
+    "cost": 0,
+    "max": 1,
+    "minLevel": 30
+  },
+  {
+    "name": "Transient Pennon",
+    "description": "﹢1.5 seconds of flight.",
+    "image": "assets/transient-pennon.png",
+    "cost": 30000,
+    "max": 1,
+    "minLevel": 30
+  },
+  {
+    "name": "Quixotic Wing",
+    "description": "﹢1.5 seconds of flight.",
+    "image": "assets/quixotic-wing.png",
+    "cost": 30000,
+    "max": 1,
+    "minLevel": 30
   }
 ]

@@ -13,6 +13,7 @@ export function saveState() {
     playerCount: settings.playerCount,
     partySize: settings.partySize,
     nothingCurse: settings.nothingCurse,
+    dependenceDelusion: settings.dependenceDelusion,
     ownedUpgrades: Array.from(ownedUpgrades.entries()),
   };
 

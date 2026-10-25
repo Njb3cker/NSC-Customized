@@ -46,6 +46,18 @@ export function getPrerequisiteText(upgrade, settings, owned) {
       return ownsUpgrade(owned, 'More Altars') ? '' : 'Requires More Altars';
     case 'Radar Module: Instruments':
       return ownsUpgrade(owned, 'Radar') ? '' : 'Requires Radar and Cadence';
+    case 'Aggro Magnet':
+      return ownsUpgrade(owned, 'Gift Magnet') ? '' : 'Requires Gift Magnet';
+    case 'Debuff Magnet':
+      return ownsUpgrade(owned, 'Gift Magnet') ? '' : 'Requires Gift Magnet';
+    case 'Propeller Hat':
+      return ownsUpgrade(owned, 'Helmet') ? '' : 'Requires Helmet';
+    case 'Soul Tracers':
+      return ownsUpgrade(owned, 'Helmet') ? '' : 'Requires Helmet';
+    case 'Altar Boons':
+      return ownsUpgrade(owned, 'Paycheck') ? '' : 'Requires Paycheck';
+    case 'Health Insurance':
+      return ownsUpgrade(owned, 'Paycheck') ? '' : 'Requires Paycheck';
     default:
       return '';
   }

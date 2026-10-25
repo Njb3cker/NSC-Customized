@@ -1,3 +1,6 @@
+// TODO: Dependence multiplier is not known yet.
+const DEPENDENCE_MULTIPLIER = 0.5;
+
 function isSoloOrDuo(partySize) {
   return partySize === 'solo' || partySize === 'duo';
 }
@@ -21,8 +24,9 @@ export function getProtectionAltarCost(level, settings, goldenGifts) {
     ? playerCount
     : Math.sqrt(playerCount) / 1.75;
 
+  const dependenceMultiplier = settings.dependenceDelusion ? DEPENDENCE_MULTIPLIER : 1;
+
   return Math.floor(
-    (goldenGifts * percent) +
-    (basePrice * levelMult * playerMultiplier)
+    ((goldenGifts * percent) + (basePrice * levelMult * playerMultiplier)) * dependenceMultiplier
   );
 }
