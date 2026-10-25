@@ -285,7 +285,7 @@
     "image": "assets/final-stand.png",
     "cost": 300,
     "max": 1,
-    "minLevel": 5
+    "minLevel": 8
   },
   {
     "name": "Radar Module: Tripmines",
