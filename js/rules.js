@@ -52,8 +52,6 @@ export function getPrerequisiteText(upgrade, settings, owned) {
       return ownsUpgrade(owned, 'Gift Magnet') ? '' : 'Requires Gift Magnet';
     case 'Propeller Hat':
       return ownsUpgrade(owned, 'Helmet') ? '' : 'Requires Helmet';
-    case 'Soul Tracers':
-      return ownsUpgrade(owned, 'Helmet') ? '' : 'Requires Helmet';
     case 'Altar Boons':
       return ownsUpgrade(owned, 'Paycheck') ? '' : 'Requires Paycheck';
     case 'Health Insurance':
@@ -82,6 +80,8 @@ export function shouldShowUpgrade(upgrade, settings) {
       return settings.playerCount > 1;
     case 'Grace Wings':
       return settings.difficulty !== 'Casual';
+    case 'Health Insurance':
+      return settings.playerCount > 1; 'Casual';
     default:
       return true;
   }

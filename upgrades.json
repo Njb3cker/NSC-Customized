@@ -368,7 +368,7 @@
     "image": "assets/soul-tracers.png",
     "cost": 1000,
     "max": 1,
-    "minLevel": 15
+    "minLevel": 13
   },
   {
     "name": "Spring Shoes",
