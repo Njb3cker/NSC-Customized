@@ -280,9 +280,9 @@
     "minLevel": 5
   },
   {
-    "name": "Last Robloxian Standing",
+    "name": "Final Stand",
     "description": "Gain a movement speed boost, 4 seconds of invincibility, and a shield when you are the last one alive.",
-    "image": "assets/last-robloxian-standing.png",
+    "image": "assets/final-stand.png",
     "cost": 300,
     "max": 1,
     "minLevel": 5

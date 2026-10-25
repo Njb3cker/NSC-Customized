@@ -74,7 +74,7 @@ export function shouldShowUpgrade(upgrade, settings) {
       return settings.partySize === 'solo' || settings.partySize === 'duo';
     case 'Defuse Kit':
       return settings.difficulty !== 'Casual';
-    case 'Last Robloxian Standing':
+    case 'Final Stand':
       return settings.playerCount > 2;
     case 'Radar Module: Tripmines':
       return settings.difficulty !== 'Casual';
