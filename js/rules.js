@@ -11,8 +11,24 @@ const RADAR_MODULES = [
   'Radar Module: Players',
 ];
 
+const EXCLUSIVE_GROUPS = [
+  ['Aggro Magnet', 'Debuff Magnet'],
+  ['Fleeting Fate', 'Panic Necklace'],
+];
+
 function ownsUpgrade(owned, name, amount = 1) {
   return (owned.get(name) ?? 0) >= amount;
+}
+
+export function getExclusiveRivals(upgradeName) {
+  return EXCLUSIVE_GROUPS
+    .filter((group) => group.includes(upgradeName))
+    .flat()
+    .filter((name) => name !== upgradeName);
+}
+
+export function getOwnedRival(upgrade, owned) {
+  return getExclusiveRivals(upgrade.name).find((name) => ownsUpgrade(owned, name)) ?? null;
 }
 
 export function getEffectiveMinLevel(upgrade, difficulty) {
@@ -97,6 +113,7 @@ function isAvailableForShop(upgrade, settings, owned) {
   return shouldShowUpgrade(upgrade, settings) &&
     meetsLevelRequirement(upgrade, settings) &&
     isPrerequisiteMet(upgrade, settings, owned) &&
+    !getOwnedRival(upgrade, owned) &&
     (owned.get(upgrade.name) ?? 0) < upgrade.max;
 }
 

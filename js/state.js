@@ -1,4 +1,5 @@
 // Shared app state. Modules import these objects and mutate them in place.
+import { getExclusiveRivals } from './rules.js';
 
 // Item data loaded from upgrades.json / curses.json.
 export const catalog = {
@@ -34,6 +35,7 @@ export function cycleOwnedCount(upgrade) {
     ownedUpgrades.delete(upgrade.name);
   } else {
     ownedUpgrades.set(upgrade.name, nextOwned);
+    getExclusiveRivals(upgrade.name).forEach((name) => ownedUpgrades.delete(name));
   }
 }
 
@@ -61,6 +63,11 @@ function toggleInSet(set, key) {
 
 export function toggleShopItem(upgrade) {
   toggleInSet(selectedShopItems, upgrade.name);
+
+  // Picking one of a mutually exclusive pair drops the other from the picks.
+  if (selectedShopItems.has(upgrade.name)) {
+    getExclusiveRivals(upgrade.name).forEach((name) => selectedShopItems.delete(name));
+  }
 }
 
 export function togglePurificationItem(curse) {

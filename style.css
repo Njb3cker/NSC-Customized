@@ -225,7 +225,8 @@ section {
 }
 
 .upgrade-card.not-yet-available,
-.upgrade-card.missing-prerequisite {
+.upgrade-card.missing-prerequisite,
+.upgrade-card.excluded {
   opacity: 0.55;
 }
 

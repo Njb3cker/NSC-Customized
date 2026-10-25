@@ -1,5 +1,5 @@
 import { upgradeGrid } from '../dom.js';
-import { getVisibleSortedUpgrades, meetsLevelRequirement, isPrerequisiteMet } from '../rules.js';
+import { getVisibleSortedUpgrades, meetsLevelRequirement, isPrerequisiteMet, getOwnedRival } from '../rules.js';
 import { ownedUpgrades, getOwnedCount, cycleOwnedCount } from '../state.js';
 import { getUpgradeCost } from '../cart.js';
 import { showTooltip, hideTooltip, moveTooltip } from './tooltip.js';
@@ -29,6 +29,7 @@ export function renderOwnedGrid(upgrades, settings, onChange) {
     card.classList.toggle('locked', !affordable);
     card.classList.toggle('not-yet-available', !availableByLevel);
     card.classList.toggle('missing-prerequisite', !prerequisiteMet);
+    card.classList.toggle('excluded', getOwnedRival(upgrade, ownedUpgrades) !== null);
     card.classList.toggle('owned', owned > 0);
     card.classList.toggle('fully-owned', owned >= upgrade.max);
 
