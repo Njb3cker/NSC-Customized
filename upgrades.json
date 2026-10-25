@@ -351,9 +351,9 @@
     "name": "Jet Boosters",
     "description": "Double jumps redirect momentum towards where you're going.",
     "image": "assets/jet-boosters.png",
-    "cost": 0,
+    "cost": 6750,
     "max": 1,
-    "minLevel": 25
+    "minLevel": 30
   },
   {
     "name": "Propeller Hat",
@@ -417,7 +417,7 @@
     "name": "Magnified Levels",
     "description": "Makes levels smaller.",
     "image": "assets/magnified-levels.png",
-    "cost": 0,
+    "cost": 3000,
     "max": 1,
     "minLevel": 30
   },
