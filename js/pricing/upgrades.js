@@ -37,6 +37,11 @@ export function getBaseUpgradeCost(upgrade, owned, { playerCount, difficulty, pa
     return stackCosts[owned];
   }
 
+  // Some upgrades have a separate price when a run is both solo and casual.
+  if (isSolo && isCasual && upgrade.costSoloCasual != null) {
+    return upgrade.costSoloCasual;
+  }
+
   if (isSolo && upgrade.costSolo != null) {
     return upgrade.costSolo;
   }
@@ -52,13 +57,17 @@ export function getBaseUpgradeCost(upgrade, owned, { playerCount, difficulty, pa
   return upgrade.cost;
 }
 
-function applySoloPricing(price, upgrade, { playerCount, partySize }) {
+function applySoloPricing(price, upgrade, { playerCount, partySize, difficulty }) {
   if (!shouldApplySoloPricing(playerCount, partySize)) {
     return price;
   }
 
   // Upgrades with explicit solo prices already have the discount baked in.
-  if (Array.isArray(upgrade.stackCostsSolo) || upgrade.costSolo != null) {
+  if (
+    Array.isArray(upgrade.stackCostsSolo) ||
+    upgrade.costSolo != null ||
+    (difficulty === 'Casual' && upgrade.costSoloCasual != null)
+  ) {
     return price;
   }
 
