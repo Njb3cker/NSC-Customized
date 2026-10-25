@@ -4,7 +4,7 @@
     "description": "﹢25% Golden Gift yield.",
     "image": "assets/business-license.png",
     "cost": 75,
-    "stackCosts": [75, 160, 160],
+    "stackCosts": [75, 150, 150],
     "max": 2,
     "minLevel": 3
   },
@@ -116,6 +116,7 @@
     "description": "25% Increased maximum jump height. Controllable jump height. Hold space to jump higher, tap space to jump lightly.",
     "image": "assets/advanced-gravity-coil.png",
     "cost": 650,
+    "costSolo": 600,
     "costCasual": 500,
     "max": 1,
     "minLevel": 8
@@ -125,7 +126,7 @@
     "description": "Less slipping on ice. Going in one direction for a while slowly gives a speed boost.",
     "image": "assets/ice-skates.png",
     "cost": 350,
-    "costSolo": 300,
+    "costSolo": 325,
     "costCasual": 300,
     "max": 1,
     "minLevel": 8
@@ -135,6 +136,7 @@
     "description": "During collapse, some tiles turn yellow. Collecting all gifts from these tiles gives bonus Golden Gifts.",
     "image": "assets/fanny-pack.png",
     "cost": 300,
+    "costSolo": 275,
     "costCasual": 250,
     "max": 1,
     "minLevel": 8
@@ -144,6 +146,7 @@
     "description": "Bonking sends you upwards and allows full control.",
     "image": "assets/helmet.png",
     "cost": 350,
+    "costSolo": 325,
     "costCasual": 300,
     "max": 1,
     "minLevel": 8
@@ -153,6 +156,7 @@
     "description": "Spawns an extra altar.",
     "image": "assets/more-altars.png",
     "cost": 500,
+    "costSolo": 450,
     "max": 1,
     "minLevel": 10
   },
@@ -318,6 +322,7 @@
     "description": "Springer collects gifts it lands on.",
     "image": "assets/birthday-pony.png",
     "cost": 350,
+    "costSolo": 300,
     "max": 1,
     "minLevel": 10
   },
@@ -326,6 +331,7 @@
     "description": "Star Marts can now spawn in the level. Touching a Star Mart will give movement speed, ﹢2 gift collection range and debuff immunity for 25 seconds.",
     "image": "assets/star-marts.png",
     "cost": 450,
+    "costSolo": 400,
     "max": 1,
     "minLevel": 8
   },
@@ -393,6 +399,7 @@
     "image": "assets/altar-boons.png",
     "stackCosts": [525, 1250, 1250],
     "stackCostsCasual": [475, 950, 950],
+    "stackCostsSolo": [500, 1000, 1000],
     "max": 2,
     "minLevel": 8
   },
