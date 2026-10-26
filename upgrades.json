@@ -79,9 +79,10 @@
     "description": "Greatly enhances air control.",
     "image": "assets/grace-wings.png",
     "cost": 300,
+    "costSolo": 200,
+    "costExtreme": 325,
     "max": 1,
-    "minLevel": 8,
-    "costSolo": 200
+    "minLevel": 8
   },
   {
     "name": "Grapple Points",
@@ -140,6 +141,7 @@
     "cost": 350,
     "costSolo": 325,
     "costCasual": 300,
+    "costExtreme": 400,
     "costSoloCasual": 250,
     "max": 1,
     "minLevel": 8
@@ -359,6 +361,7 @@
     "image": "assets/star-marts.png",
     "cost": 450,
     "costSolo": 400,
+    "costExtreme": 550,
     "costSoloCasual": 300,
     "costSoloExtreme": 500,
     "max": 1,
