@@ -100,6 +100,7 @@
     "description": "Tracks enemies through walls.",
     "image": "assets/radar-module-enemies.png",
     "cost": 200,
+    "costSolo": 150,
     "max": 1,
     "minLevel": 8
   },
@@ -108,6 +109,7 @@
     "description": "Marks the location of all unused altars every 12 seconds.",
     "image": "assets/radar-module-altars.png",
     "cost": 300,
+    "costSolo": 250,
     "max": 1,
     "minLevel": 8
   },
@@ -175,6 +177,7 @@
     "description": "Grapple Points are 25% larger.",
     "image": "assets/larger-grapple-points.png",
     "cost": 400,
+    "costSolo": 300,
     "max": 1,
     "minLevel": 13
   },
@@ -183,6 +186,7 @@
     "description": "Gives the player a unique buff according to their class.",
     "image": "assets/shark-tail.png",
     "cost": 1200,
+    "costSolo": 1000,
     "costCasual": 800,
     "costExtreme": 1500,
     "max": 1,
@@ -194,8 +198,8 @@
     "image": "assets/gift-magnet.png",
     "cost": 1500,
     "stackCosts": [1500, 2100, 2700, 2700],
+    "stackCostsSolo": [1250, 2000, 2500, 2500],
     "stackCostsCasual": [750, 1050, 1350, 1350],
-    "stackCostsExtreme": [1800, 2520, 3240, 3240],
     "max": 3,
     "minLevel": 15
   },
@@ -204,6 +208,7 @@
     "description": "Instant Acceleration. Completely Removes the slippery/icey movement.",
     "image": "assets/matrix-tetrahedron.png",
     "cost": 2250,
+    "costSolo": 2000,
     "costCasual": 1500,
     "costExtreme": 3000,
     "max": 1,
@@ -214,6 +219,7 @@
     "description": "﹢40% Movement speed.",
     "image": "assets/sport-shoes.png",
     "cost": 1350,
+    "costSolo": 1250,
     "costCasual": 1000,
     "costExtreme": 1600,
     "max": 1,
@@ -224,7 +230,7 @@
     "description": "Allows you to take an extra hit. Doesn't protect you from the Void.",
     "image": "assets/shield.png",
     "cost": 4000,
-    "costSolo": 1000,
+    "costSolo": 2000,
     "costCasual": 2000,
     "max": 1,
     "minLevel": 15
@@ -303,6 +309,7 @@
     "description": "Highlights all nearby Tripmines.",
     "image": "assets/radar-module-tripmines.png",
     "cost": 400,
+    "costSolo": 300,
     "max": 1,
     "minLevel": 8
   },
@@ -311,7 +318,7 @@
     "description": "Allows you take an extra hit from Tripmines and Void Implosions.",
     "image": "assets/subspacial-barrier.png",
     "cost": 1000,
-    "stackCostsSolo": [500, 1500, 1500],
+    "stackCostsSolo": [500, 1250, 1500],
     "stackCosts": [1000, 3000, 3000],
     "max": 2,
     "minLevel": 13,
@@ -366,6 +373,7 @@
     "description": "Allows you to double jump while bonked, but instantly uses all available jumps. Ringing Bell and getting hit by Springer's shockwaves now replenish double jumps.",
     "image": "assets/propeller-hat.png",
     "cost": 750,
+    "costSolo": 650,
     "max": 1,
     "minLevel": 15
   },
@@ -382,6 +390,7 @@
     "description": "Whenever a player dies, they drop an orb and increase the Golden Gift yield, collecting the orb further increases the Golden Gift yield.",
     "image": "assets/soul-tracers.png",
     "cost": 1000,
+    "costSolo": 600,
     "max": 1,
     "minLevel": 13
   },
@@ -425,7 +434,7 @@
     "description": "Makes levels smaller.",
     "image": "assets/magnified-levels.png",
     "cost": 3000,
-    "max": 1,
+    "max": 3,
     "minLevel": 30
   },
   {
