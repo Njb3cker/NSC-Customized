@@ -19,6 +19,7 @@ export const altarShopSection = byId('altar-shop-section');
 export const altarShopGrid = byId('altar-shop-grid');
 export const altarShopMoney = byId('altar-shop-money');
 export const dependenceDelusionInput = byId('dependence-delusion');
+export const arroganceConceitDelusionInput = byId('arrogance-conceit-delusion');
 
 export const purificationShopSection = byId('purification-shop-section');
 export const purificationShopGrid = byId('purification-shop-grid');

@@ -14,6 +14,7 @@ export function saveState() {
     partySize: settings.partySize,
     nothingCurse: settings.nothingCurse,
     dependenceDelusion: settings.dependenceDelusion,
+    arroganceConceitDelusion: settings.arroganceConceitDelusion,
     ownedUpgrades: Array.from(ownedUpgrades.entries()),
   };
 

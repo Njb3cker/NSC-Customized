@@ -6,6 +6,7 @@ import {
   partySizeSelect,
   nothingCurseInput,
   dependenceDelusionInput,
+  arroganceConceitDelusionInput,
 } from './dom.js';
 
 function readPlayerCount() {
@@ -22,6 +23,7 @@ export function getCurrentSettings() {
     partySize: partySizeSelect.value,
     nothingCurse: nothingCurseInput.checked,
     dependenceDelusion: dependenceDelusionInput.checked,
+    arroganceConceitDelusion: arroganceConceitDelusionInput.checked,
   };
 }
 
@@ -33,6 +35,7 @@ export function applySettings(state) {
   playerCountInput.value = state.playerCount ?? '';
   nothingCurseInput.checked = Boolean(state.nothingCurse);
   dependenceDelusionInput.checked = Boolean(state.dependenceDelusion);
+  arroganceConceitDelusionInput.checked = Boolean(state.arroganceConceitDelusion);
 }
 
 export function setSharedGoldenGifts(value) {
@@ -48,6 +51,7 @@ export function resetRunSettings() {
   currentLevelInput.value = '3';
   nothingCurseInput.checked = false;
   dependenceDelusionInput.checked = false;
+  arroganceConceitDelusionInput.checked = false;
 }
 
 export function isSoloOrDuoSelected() {

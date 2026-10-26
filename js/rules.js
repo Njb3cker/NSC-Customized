@@ -16,6 +16,17 @@ const EXCLUSIVE_GROUPS = [
   ['Fleeting Fate', 'Panic Necklace'],
 ];
 
+// Upgrades that never get the Arrogance / Conceit bonus stack.
+const NO_BONUS_STACK = ['Defuse Kit'];
+
+export function getMaxStacks(upgrade, settings) {
+  const getsBonusStack = settings.arroganceConceitDelusion &&
+    upgrade.max > 1 &&
+    !NO_BONUS_STACK.includes(upgrade.name);
+
+  return upgrade.max + (getsBonusStack ? 1 : 0);
+}
+
 function ownsUpgrade(owned, name, amount = 1) {
   return (owned.get(name) ?? 0) >= amount;
 }
@@ -132,7 +143,7 @@ function isAvailableForShop(upgrade, settings, owned) {
     meetsLevelRequirement(upgrade, settings) &&
     isPrerequisiteMet(upgrade, settings, owned) &&
     !getOwnedRival(upgrade, owned) &&
-    (owned.get(upgrade.name) ?? 0) < upgrade.max;
+    (owned.get(upgrade.name) ?? 0) < getMaxStacks(upgrade, settings);
 }
 
 export function getShopItems(upgrades, settings, owned) {

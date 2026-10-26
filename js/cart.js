@@ -2,7 +2,7 @@
 import { getAdjustedCost } from './pricing/upgrades.js';
 import { getProtectionAltarCost } from './pricing/altars.js';
 import { getPurificationCost } from './pricing/purification.js';
-import { getShopItems, getNextShopLevel } from './rules.js';
+import { getShopItems, getNextShopLevel, getMaxStacks } from './rules.js';
 import {
   catalog,
   ownedUpgrades,
@@ -126,7 +126,7 @@ export function purchaseSelectedItems(settings) {
 
     const currentOwned = getOwnedCount(upgrade.name);
 
-    if (currentOwned < upgrade.max) {
+    if (currentOwned < getMaxStacks(upgrade, settings)) {
       ownedUpgrades.set(upgrade.name, currentOwned + 1);
     }
   });

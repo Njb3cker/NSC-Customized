@@ -1,6 +1,6 @@
 import { tooltip } from '../dom.js';
 import { getBaseUpgradeCost } from '../pricing/upgrades.js';
-import { getEffectiveMinLevel, getPrerequisiteText, getExclusiveRivals, getEnemyRequirements } from '../rules.js';
+import { getEffectiveMinLevel, getPrerequisiteText, getExclusiveRivals, getEnemyRequirements, getMaxStacks } from '../rules.js';
 import { getCurrentSettings } from '../settings.js';
 import { ownedUpgrades, getOwnedCount } from '../state.js';
 import { getUpgradeCost } from '../cart.js';
@@ -22,8 +22,8 @@ export function showTooltip(upgrade) {
     <h3>${upgrade.name}</h3>
     <p><strong>Base cost:</strong> ${baseCost}</p>
     <p><strong>Cost:</strong> ${adjustedCost}</p>
-    <p><strong>Owned:</strong> ${owned}/${upgrade.max}</p>
-    <p><strong>Max:</strong> ${upgrade.max}</p>
+    <p><strong>Owned:</strong> ${owned}/${getMaxStacks(upgrade, settings)}</p>
+    <p><strong>Max:</strong> ${getMaxStacks(upgrade, settings)}</p>
     <p><strong>Min level:</strong> ${getEffectiveMinLevel(upgrade, settings.difficulty)}</p>
     ${prerequisiteText ? `<p><strong>Requirement:</strong> ${prerequisiteText}</p>` : ''}
     ${enemies.length ? `<p><strong>Requires enemy:</strong> ${enemies.join(', ')}</p>` : ''}

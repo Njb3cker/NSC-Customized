@@ -27,15 +27,26 @@ export function getOwnedCount(upgradeName) {
   return ownedUpgrades.get(upgradeName) ?? 0;
 }
 
-export function cycleOwnedCount(upgrade) {
+export function cycleOwnedCount(upgrade, maxStacks) {
   const currentOwned = getOwnedCount(upgrade.name);
-  const nextOwned = currentOwned >= upgrade.max ? 0 : currentOwned + 1;
+  const nextOwned = currentOwned >= maxStacks ? 0 : currentOwned + 1;
 
   if (nextOwned === 0) {
     ownedUpgrades.delete(upgrade.name);
   } else {
     ownedUpgrades.set(upgrade.name, nextOwned);
     getExclusiveRivals(upgrade.name).forEach((name) => ownedUpgrades.delete(name));
+  }
+}
+
+// Lower owned counts that are above what the run allows (e.g. after turning Arrogance / Conceit off).
+export function clampOwnedToMax(getMax) {
+  for (const [name, count] of ownedUpgrades) {
+    const upgrade = findUpgrade(name);
+
+    if (upgrade && count > getMax(upgrade)) {
+      ownedUpgrades.set(name, getMax(upgrade));
+    }
   }
 }
 

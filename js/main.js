@@ -7,6 +7,7 @@ import {
   currentLevelInput,
   nothingCurseInput,
   dependenceDelusionInput,
+  arroganceConceitDelusionInput,
   playerCountInput,
   difficultySelect,
   partySizeSelect,
@@ -20,7 +21,8 @@ import {
   isSoloOrDuoSelected,
   syncPartySizeWithPlayerCount,
 } from './settings.js';
-import { catalog, ownedUpgrades, clearSelections } from './state.js';
+import { catalog, ownedUpgrades, clearSelections, clampOwnedToMax } from './state.js';
+import { getMaxStacks } from './rules.js';
 import { saveState, loadState, clearSavedState } from './storage.js';
 import { purchaseSelectedItems } from './cart.js';
 import { renderAll } from './ui/render.js';
@@ -86,6 +88,12 @@ async function loadCurses() {
 
 [currentMoneyInput, currentLevelInput, nothingCurseInput, dependenceDelusionInput, difficultySelect, partySizeSelect].forEach((input) => {
   input.addEventListener('input', update);
+});
+
+arroganceConceitDelusionInput.addEventListener('input', () => {
+  const settings = getCurrentSettings();
+  clampOwnedToMax((upgrade) => getMaxStacks(upgrade, settings));
+  update();
 });
 
 playerCountInput.addEventListener('input', () => {

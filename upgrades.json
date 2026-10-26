@@ -10,7 +10,7 @@
     "stackCostsSoloCasual": [50, 100, 1000],
     "stackCostsExtreme": [75, 200, 2000],
     "stackCostsSoloExtreme": [75, 180, 1500],
-    "max": 4,
+    "max": 2,
     "minLevel": 3
   },
   {
@@ -34,7 +34,7 @@
     "stackCostsSoloCasual": [60, 60, 60, 800],
     "stackCostsExtreme": [80, 80, 80, 1500],
     "stackCostsSoloExtreme": [80, 80, 80, 1250],
-    "max": 4,
+    "max": 3,
     "minLevel": 3
   },
   {
@@ -258,7 +258,7 @@
     "stackCostsSoloCasual": [500, 800, 1150, 3000],
     "stackCostsExtreme": [1800, 2600, 3400, 7500],
     "stackCostsSoloExtreme": [1500, 2500, 3500, 7000],
-    "max": 4,
+    "max": 3,
     "minLevel": 15
   },
   {
@@ -347,7 +347,7 @@
     "stackCostsSoloCasual": [2000, 4000, 6000, 8000, 10000, 15000],
     "stackCostsExtreme": [5000, 8000, 12000, 16000, 22500, 28500],
     "stackCostsSoloExtreme": [4000, 7000, 10000, 13000, 16000, 25000],
-    "max": 6,
+    "max": 5,
     "minLevel": 20
   },
   {
@@ -409,7 +409,7 @@
     "stackCostsSoloCasual": [400, 1000, 2000],
     "stackCostsExtreme": [1000, 1500, 3750],
     "stackCostsSoloExtreme": [500, 1500, 3250],
-    "max": 3,
+    "max": 2,
     "minLevel": 13,
     "minLevelCasual": 15
   },
@@ -534,7 +534,7 @@
     "stackCostsSoloCasual": [450, 1000, 2500],
     "stackCostsExtreme": [600, 1500, 4500],
     "stackCostsSoloExtreme": [600, 1250, 3999],
-    "max": 3,
+    "max": 2,
     "minLevel": 8
   },
   {
@@ -571,7 +571,7 @@
     "stackCostsSoloCasual": [1500, 4500, 10000, 15000],
     "stackCostsExtreme": [3000, 9000, 15000, 25000],
     "stackCostsSoloExtreme": [3000, 9000, 15000, 20000],
-    "max": 4,
+    "max": 3,
     "minLevel": 30
   },
   {
