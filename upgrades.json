@@ -5,6 +5,7 @@
     "image": "assets/business-license.png",
     "cost": 75,
     "stackCosts": [75, 150, 150],
+    "stackCostsSoloCasual": [50, 100, 100],
     "max": 2,
     "minLevel": 3
   },
@@ -13,6 +14,7 @@
     "description": "Gain ﹢40 (﹢10 per beaconed player) Golden Gifts every round if half or more of the players survive.",
     "image": "assets/paycheck.png",
     "cost": 55,
+    "costSoloCasual": 33,
     "max": 5,
     "minLevel": 3
   },
@@ -51,6 +53,7 @@
     "description": "Allows you to double jump.",
     "image": "assets/double-jump.png",
     "cost": 150,
+    "costSoloCasual": 125,
     "max": 1,
     "minLevel": 5
   },
@@ -93,6 +96,7 @@
     "image": "assets/pocket-bell.png",
     "cost": 300,
     "costCasual": 275,
+    "costSoloCasual": 250,
     "max": 1,
     "minLevel": 8
   },
@@ -102,6 +106,7 @@
     "image": "assets/radar-module-enemies.png",
     "cost": 200,
     "costSolo": 150,
+    "costSoloCasual": 125,
     "max": 1,
     "minLevel": 8
   },
@@ -111,6 +116,7 @@
     "image": "assets/radar-module-altars.png",
     "cost": 300,
     "costSolo": 250,
+    "costSoloCasual": 200,
     "max": 1,
     "minLevel": 8
   },
@@ -121,6 +127,7 @@
     "cost": 650,
     "costSolo": 600,
     "costCasual": 500,
+    "costSoloCasual": 500,
     "max": 1,
     "minLevel": 8
   },
@@ -131,6 +138,7 @@
     "cost": 350,
     "costSolo": 325,
     "costCasual": 300,
+    "costSoloCasual": 250,
     "max": 1,
     "minLevel": 8
   },
@@ -141,6 +149,7 @@
     "cost": 300,
     "costSolo": 275,
     "costCasual": 250,
+    "costSoloCasual": 250,
     "max": 1,
     "minLevel": 8
   },
@@ -151,6 +160,7 @@
     "cost": 350,
     "costSolo": 325,
     "costCasual": 300,
+    "costSoloCasual": 275,
     "costSoloExtreme": 375,
     "max": 1,
     "minLevel": 8
@@ -346,6 +356,7 @@
     "image": "assets/star-marts.png",
     "cost": 450,
     "costSolo": 400,
+    "costSoloCasual": 300,
     "costSoloExtreme": 500,
     "max": 1,
     "minLevel": 8
@@ -382,6 +393,7 @@
     "image": "assets/propeller-hat.png",
     "cost": 750,
     "costSolo": 650,
+    "costSoloCasual": 550,
     "max": 1,
     "minLevel": 15
   },
@@ -417,6 +429,7 @@
     "stackCosts": [525, 1250, 1250],
     "stackCostsCasual": [475, 950, 950],
     "stackCostsSolo": [500, 1000, 1000],
+    "stackCostsSoloCasual": [450, 900, 900],
     "stackCostsSoloExtreme": [600, 1200, 1200],
     "max": 2,
     "minLevel": 8
