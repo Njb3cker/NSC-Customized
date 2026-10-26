@@ -45,7 +45,6 @@ export function setCurrentLevel(level) {
 
 export function resetRunSettings() {
   setSharedGoldenGifts(0);
-  currentLevelInput.value = '3';
   nothingCurseInput.checked = false;
   dependenceDelusionInput.checked = false;
 }

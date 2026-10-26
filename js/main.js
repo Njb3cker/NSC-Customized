@@ -2,6 +2,7 @@ import {
   upgradeGrid,
   purificationShopGrid,
   resetButton,
+  presetSelect,
   purchaseItemsButton,
   currentMoneyInput,
   currentLevelInput,
@@ -17,7 +18,6 @@ import {
   setSharedGoldenGifts,
   setCurrentLevel,
   resetRunSettings,
-  isSoloOrDuoSelected,
   syncPartySizeWithPlayerCount,
 } from './settings.js';
 import { catalog, ownedUpgrades, clearSelections } from './state.js';
@@ -25,6 +25,7 @@ import { saveState, loadState, clearSavedState } from './storage.js';
 import { purchaseSelectedItems } from './cart.js';
 import { renderAll } from './ui/render.js';
 import { initHowToUseModal } from './ui/modal.js';
+import { loadPreset } from './presets.js';
 
 function render() {
   renderAll({ onOwnedChange: update, onSelectionChange: render });
@@ -40,13 +41,9 @@ function resetAll() {
 
   ownedUpgrades.clear();
 
-  // Solo and duo runs start with a Paycheck.
-  if (isSoloOrDuoSelected()) {
-    ownedUpgrades.set('Paycheck', 1);
-  }
-
   resetRunSettings();
   clearSelections();
+  loadPreset();
   update();
 }
 

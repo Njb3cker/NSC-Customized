@@ -3,6 +3,7 @@ const byId = (id) => document.getElementById(id);
 export const upgradeGrid = byId('upgrade-grid');
 export const tooltip = byId('upgrade-tooltip');
 export const resetButton = byId('reset-all');
+export const presetSelect = byId('preset');
 export const purchaseItemsButton = byId('purchase-items');
 
 export const currentMoneyInput = byId('current-money');
