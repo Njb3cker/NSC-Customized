@@ -25,7 +25,9 @@ export function getBaseUpgradeCost(upgrade, owned, { playerCount, difficulty, pa
 
   let stackCosts = upgrade.stackCosts;
 
-  if (isSolo && Array.isArray(upgrade.stackCostsSolo)) {
+  if (isSolo && isExtreme && Array.isArray(upgrade.stackCostsSoloExtreme)) {
+    stackCosts = upgrade.stackCostsSoloExtreme;
+  } else if (isSolo && Array.isArray(upgrade.stackCostsSolo)) {
     stackCosts = upgrade.stackCostsSolo;
   } else if (isCasual && Array.isArray(upgrade.stackCostsCasual)) {
     stackCosts = upgrade.stackCostsCasual;
@@ -37,9 +39,13 @@ export function getBaseUpgradeCost(upgrade, owned, { playerCount, difficulty, pa
     return stackCosts[owned];
   }
 
-  // Some upgrades have a separate price when a run is both solo and casual.
+  // Some upgrades have a separate price when a run is solo and casual or solo and extreme.
   if (isSolo && isCasual && upgrade.costSoloCasual != null) {
     return upgrade.costSoloCasual;
+  }
+
+  if (isSolo && isExtreme && upgrade.costSoloExtreme != null) {
+    return upgrade.costSoloExtreme;
   }
 
   if (isSolo && upgrade.costSolo != null) {
@@ -66,7 +72,8 @@ function applySoloPricing(price, upgrade, { playerCount, partySize, difficulty }
   if (
     Array.isArray(upgrade.stackCostsSolo) ||
     upgrade.costSolo != null ||
-    (difficulty === 'Casual' && upgrade.costSoloCasual != null)
+    (difficulty === 'Casual' && upgrade.costSoloCasual != null) ||
+    (difficulty === 'Extreme' && (upgrade.costSoloExtreme != null || Array.isArray(upgrade.stackCostsSoloExtreme)))
   ) {
     return price;
   }

@@ -34,6 +34,7 @@
     "costSolo": 125,
     "costCasual": 125,
     "costSoloCasual": 100,
+    "costSoloExtreme": 150,
     "max": 1,
     "minLevel": 5
   },
@@ -150,6 +151,7 @@
     "cost": 350,
     "costSolo": 325,
     "costCasual": 300,
+    "costSoloExtreme": 375,
     "max": 1,
     "minLevel": 8
   },
@@ -159,6 +161,7 @@
     "image": "assets/more-altars.png",
     "cost": 500,
     "costSolo": 450,
+    "costSoloExtreme": 550,
     "max": 1,
     "minLevel": 10
   },
@@ -168,6 +171,7 @@
     "image": "assets/ninja-belt.png",
     "cost": 600,
     "costCasual": 500,
+    "costSoloExtreme": 525,
     "max": 1,
     "minLevel": 13,
     "costSolo": 500
@@ -178,6 +182,7 @@
     "image": "assets/larger-grapple-points.png",
     "cost": 400,
     "costSolo": 300,
+    "costSoloExtreme": 325,
     "max": 1,
     "minLevel": 13
   },
@@ -265,6 +270,7 @@
     "name": "Gift Idol",
     "description": "Collecting gifts has a ﹢1% chance to collect nearby gifts.",
     "image": "assets/gift-idol.png",
+    "cost": 4000,
     "stackCosts": [3500, 7000, 10500, 14000, 17500, 17500],
     "stackCostsCasual": [3000, 6000, 9000, 12000, 15000, 15000],
     "stackCostsExtreme": [5000, 10000, 15000, 20000, 25000, 25000],
@@ -330,6 +336,7 @@
     "image": "assets/birthday-pony.png",
     "cost": 350,
     "costSolo": 300,
+    "costSoloExtreme": 400,
     "max": 1,
     "minLevel": 10
   },
@@ -339,6 +346,7 @@
     "image": "assets/star-marts.png",
     "cost": 450,
     "costSolo": 400,
+    "costSoloExtreme": 500,
     "max": 1,
     "minLevel": 8
   },
@@ -409,6 +417,7 @@
     "stackCosts": [525, 1250, 1250],
     "stackCostsCasual": [475, 950, 950],
     "stackCostsSolo": [500, 1000, 1000],
+    "stackCostsSoloExtreme": [600, 1200, 1200],
     "max": 2,
     "minLevel": 8
   },
