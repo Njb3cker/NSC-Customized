@@ -16,4 +16,4 @@ Web tool to help plan Nullscape shop purchases and upgrades.
   - Marks unaffordable choices in red.
 - Beginning of run presets
   - Presets for common run starts
-  - includes all party types
+  - Includes all party types
