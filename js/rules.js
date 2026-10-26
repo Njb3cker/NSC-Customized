@@ -72,8 +72,6 @@ export function getPrerequisiteText(upgrade, settings, owned) {
       return ownsUpgrade(owned, 'Paycheck') ? '' : 'Requires Paycheck';
     case 'Health Insurance':
       return ownsUpgrade(owned, 'Paycheck') ? '' : 'Requires Paycheck';
-    case 'Spring Shoes':
-      return  'Requires Springer Enemy';
     default:
       return '';
   }
