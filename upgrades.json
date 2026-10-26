@@ -5,6 +5,7 @@
     "image": "assets/business-license.png",
     "cost": 75,
     "stackCosts": [75, 150, 150],
+    "stackCostsSoloCasual": [50, 100, 100],
     "max": 2,
     "minLevel": 3
   },
@@ -13,6 +14,7 @@
     "description": "Gain ﹢40 (﹢10 per beaconed player) Golden Gifts every round if half or more of the players survive.",
     "image": "assets/paycheck.png",
     "cost": 55,
+    "costSoloCasual": 33,
     "max": 5,
     "minLevel": 3
   },
@@ -34,6 +36,7 @@
     "costSolo": 125,
     "costCasual": 125,
     "costSoloCasual": 100,
+    "costSoloExtreme": 150,
     "max": 1,
     "minLevel": 5
   },
@@ -50,6 +53,7 @@
     "description": "Allows you to double jump.",
     "image": "assets/double-jump.png",
     "cost": 150,
+    "costSoloCasual": 125,
     "max": 1,
     "minLevel": 5
   },
@@ -92,6 +96,7 @@
     "image": "assets/pocket-bell.png",
     "cost": 300,
     "costCasual": 275,
+    "costSoloCasual": 250,
     "max": 1,
     "minLevel": 8
   },
@@ -100,6 +105,8 @@
     "description": "Tracks enemies through walls.",
     "image": "assets/radar-module-enemies.png",
     "cost": 200,
+    "costSolo": 150,
+    "costSoloCasual": 125,
     "max": 1,
     "minLevel": 8
   },
@@ -108,6 +115,8 @@
     "description": "Marks the location of all unused altars every 12 seconds.",
     "image": "assets/radar-module-altars.png",
     "cost": 300,
+    "costSolo": 250,
+    "costSoloCasual": 200,
     "max": 1,
     "minLevel": 8
   },
@@ -118,6 +127,7 @@
     "cost": 650,
     "costSolo": 600,
     "costCasual": 500,
+    "costSoloCasual": 500,
     "max": 1,
     "minLevel": 8
   },
@@ -128,6 +138,7 @@
     "cost": 350,
     "costSolo": 325,
     "costCasual": 300,
+    "costSoloCasual": 250,
     "max": 1,
     "minLevel": 8
   },
@@ -138,6 +149,7 @@
     "cost": 300,
     "costSolo": 275,
     "costCasual": 250,
+    "costSoloCasual": 250,
     "max": 1,
     "minLevel": 8
   },
@@ -148,6 +160,8 @@
     "cost": 350,
     "costSolo": 325,
     "costCasual": 300,
+    "costSoloCasual": 275,
+    "costSoloExtreme": 375,
     "max": 1,
     "minLevel": 8
   },
@@ -157,6 +171,7 @@
     "image": "assets/more-altars.png",
     "cost": 500,
     "costSolo": 450,
+    "costSoloExtreme": 550,
     "max": 1,
     "minLevel": 10
   },
@@ -165,16 +180,19 @@
     "description": "Gives the player a unique buff according to their class.",
     "image": "assets/ninja-belt.png",
     "cost": 600,
+    "costSolo": 500,
     "costCasual": 500,
+    "costSoloExtreme": 525,
     "max": 1,
-    "minLevel": 13,
-    "costSolo": 500
+    "minLevel": 13
   },
   {
     "name": "Larger Grapple Points",
     "description": "Grapple Points are 25% larger.",
     "image": "assets/larger-grapple-points.png",
     "cost": 400,
+    "costSolo": 300,
+    "costSoloExtreme": 325,
     "max": 1,
     "minLevel": 13
   },
@@ -183,6 +201,7 @@
     "description": "Gives the player a unique buff according to their class.",
     "image": "assets/shark-tail.png",
     "cost": 1200,
+    "costSolo": 1000,
     "costCasual": 800,
     "costExtreme": 1500,
     "max": 1,
@@ -194,8 +213,8 @@
     "image": "assets/gift-magnet.png",
     "cost": 1500,
     "stackCosts": [1500, 2100, 2700, 2700],
+    "stackCostsSolo": [1250, 2000, 2500, 2500],
     "stackCostsCasual": [750, 1050, 1350, 1350],
-    "stackCostsExtreme": [1800, 2520, 3240, 3240],
     "max": 3,
     "minLevel": 15
   },
@@ -204,6 +223,7 @@
     "description": "Instant Acceleration. Completely Removes the slippery/icey movement.",
     "image": "assets/matrix-tetrahedron.png",
     "cost": 2250,
+    "costSolo": 2000,
     "costCasual": 1500,
     "costExtreme": 3000,
     "max": 1,
@@ -214,6 +234,7 @@
     "description": "﹢40% Movement speed.",
     "image": "assets/sport-shoes.png",
     "cost": 1350,
+    "costSolo": 1250,
     "costCasual": 1000,
     "costExtreme": 1600,
     "max": 1,
@@ -224,7 +245,7 @@
     "description": "Allows you to take an extra hit. Doesn't protect you from the Void.",
     "image": "assets/shield.png",
     "cost": 4000,
-    "costSolo": 1000,
+    "costSolo": 2000,
     "costCasual": 2000,
     "max": 1,
     "minLevel": 15
@@ -259,6 +280,7 @@
     "name": "Gift Idol",
     "description": "Collecting gifts has a ﹢1% chance to collect nearby gifts.",
     "image": "assets/gift-idol.png",
+    "cost": 4000,
     "stackCosts": [3500, 7000, 10500, 14000, 17500, 17500],
     "stackCostsCasual": [3000, 6000, 9000, 12000, 15000, 15000],
     "stackCostsExtreme": [5000, 10000, 15000, 20000, 25000, 25000],
@@ -303,6 +325,7 @@
     "description": "Highlights all nearby Tripmines.",
     "image": "assets/radar-module-tripmines.png",
     "cost": 400,
+    "costSolo": 300,
     "max": 1,
     "minLevel": 8
   },
@@ -311,7 +334,7 @@
     "description": "Allows you take an extra hit from Tripmines and Void Implosions.",
     "image": "assets/subspacial-barrier.png",
     "cost": 1000,
-    "stackCostsSolo": [500, 1500, 1500],
+    "stackCostsSolo": [500, 1250, 1500],
     "stackCosts": [1000, 3000, 3000],
     "max": 2,
     "minLevel": 13,
@@ -323,6 +346,7 @@
     "image": "assets/birthday-pony.png",
     "cost": 350,
     "costSolo": 300,
+    "costSoloExtreme": 400,
     "max": 1,
     "minLevel": 10
   },
@@ -332,6 +356,8 @@
     "image": "assets/star-marts.png",
     "cost": 450,
     "costSolo": 400,
+    "costSoloCasual": 300,
+    "costSoloExtreme": 500,
     "max": 1,
     "minLevel": 8
   },
@@ -366,6 +392,8 @@
     "description": "Allows you to double jump while bonked, but instantly uses all available jumps. Ringing Bell and getting hit by Springer's shockwaves now replenish double jumps.",
     "image": "assets/propeller-hat.png",
     "cost": 750,
+    "costSolo": 650,
+    "costSoloCasual": 550,
     "max": 1,
     "minLevel": 15
   },
@@ -382,6 +410,7 @@
     "description": "Whenever a player dies, they drop an orb and increase the Golden Gift yield, collecting the orb further increases the Golden Gift yield.",
     "image": "assets/soul-tracers.png",
     "cost": 1000,
+    "costSolo": 600,
     "max": 1,
     "minLevel": 13
   },
@@ -400,6 +429,8 @@
     "stackCosts": [525, 1250, 1250],
     "stackCostsCasual": [475, 950, 950],
     "stackCostsSolo": [500, 1000, 1000],
+    "stackCostsSoloCasual": [450, 900, 900],
+    "stackCostsSoloExtreme": [600, 1200, 1200],
     "max": 2,
     "minLevel": 8
   },
@@ -425,7 +456,7 @@
     "description": "Makes levels smaller.",
     "image": "assets/magnified-levels.png",
     "cost": 3000,
-    "max": 1,
+    "max": 3,
     "minLevel": 30
   },
   {

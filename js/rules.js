@@ -97,7 +97,7 @@ export function shouldShowUpgrade(upgrade, settings) {
     case 'Grace Wings':
       return settings.difficulty !== 'Casual';
     case 'Health Insurance':
-      return settings.playerCount > 1; 'Casual';
+      return settings.playerCount > 2;
     default:
       return true;
   }
