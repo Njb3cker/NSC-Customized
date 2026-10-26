@@ -5,6 +5,7 @@
     "image": "assets/business-license.png",
     "cost": 75,
     "stackCosts": [75, 160, 160],
+    "stackCostsSolo": [75, 150, 150],
     "stackCostsSoloCasual": [50, 100, 100],
     "max": 2,
     "minLevel": 3
