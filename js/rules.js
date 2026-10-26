@@ -47,6 +47,7 @@ const ENEMY_REQUIREMENTS = {
   'Star Marts': ['Mart'],
   'Birthday Pony': ['Springer'],
   'Spring Shoes' : ['Springer'],
+  'Jet Boosters': ['Scrapmaw'],
 };
 
 export function getEnemyRequirements(upgradeName) {
