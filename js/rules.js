@@ -72,6 +72,8 @@ export function getPrerequisiteText(upgrade, settings, owned) {
       return ownsUpgrade(owned, 'Paycheck') ? '' : 'Requires Paycheck';
     case 'Health Insurance':
       return ownsUpgrade(owned, 'Paycheck') ? '' : 'Requires Paycheck';
+    case 'Spring Shoes':
+      return  'Requires Springer Enemy';
     default:
       return '';
   }
@@ -95,6 +97,8 @@ export function shouldShowUpgrade(upgrade, settings) {
     case 'Radar Module: Players':
       return settings.playerCount > 1;
     case 'Grace Wings':
+      return settings.difficulty !== 'Casual';
+    case 'Miniature Hourglass':
       return settings.difficulty !== 'Casual';
     case 'Health Insurance':
       return settings.playerCount > 2;
