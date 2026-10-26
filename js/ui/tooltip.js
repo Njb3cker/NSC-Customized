@@ -3,7 +3,7 @@ import { getBaseUpgradeCost } from '../pricing/upgrades.js';
 import { getEffectiveMinLevel, getPrerequisiteText, getExclusiveRivals, getEnemyRequirements, getMaxStacks } from '../rules.js';
 import { getCurrentSettings } from '../settings.js';
 import { ownedUpgrades, getOwnedCount } from '../state.js';
-import { getUpgradeCost } from '../cart.js';
+import { getUpgradeCost, getPricedStack } from '../cart.js';
 
 const CURSOR_OFFSET = 14;
 
@@ -12,7 +12,7 @@ let activeUpgrade = null;
 export function showTooltip(upgrade) {
   const settings = getCurrentSettings();
   const owned = getOwnedCount(upgrade.name);
-  const baseCost = getBaseUpgradeCost(upgrade, owned, settings);
+  const baseCost = getBaseUpgradeCost(upgrade, getPricedStack(upgrade, settings), settings);
   const adjustedCost = getUpgradeCost(upgrade, settings);
   const prerequisiteText = getPrerequisiteText(upgrade, settings, ownedUpgrades);
   const rivals = getExclusiveRivals(upgrade.name);

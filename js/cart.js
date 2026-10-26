@@ -14,8 +14,14 @@ import {
   getOwnedCount,
 } from './state.js';
 
+// Which stack an upgrade's displayed price is for: the next one to buy, or the last one once maxed out
+// (so a maxed upgrade keeps its price instead of showing a stack it can't have, like the Arrogance / Conceit bonus stack).
+export function getPricedStack(upgrade, settings) {
+  return Math.min(getOwnedCount(upgrade.name), getMaxStacks(upgrade, settings) - 1);
+}
+
 export function getUpgradeCost(upgrade, settings) {
-  return getAdjustedCost(upgrade, getOwnedCount(upgrade.name), settings);
+  return getAdjustedCost(upgrade, getPricedStack(upgrade, settings), settings);
 }
 
 export function getCurseCost(curse, settings) {
