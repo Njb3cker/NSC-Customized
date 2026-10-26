@@ -41,7 +41,20 @@ export function meetsLevelRequirement(upgrade, settings) {
   return settings.currentLevel >= getEffectiveMinLevel(upgrade, settings.difficulty);
 }
 
+const ENEMY_REQUIREMENTS = {
+  'Pocket Bell': ['Bell'],
+  'Radar Module: Instruments': ['Cadence'],
+  'Star Marts': ['Mart'],
+  'Birthday Pony': ['Springer'],
+  'Spring Shoes' : ['Springer'],
+};
+
+export function getEnemyRequirements(upgradeName) {
+  return ENEMY_REQUIREMENTS[upgradeName] ?? [];
+}
+
 // Returns '' when the prerequisite is met, otherwise text describing what is missing.
+// Any text returned here hides the upgrade from the shop; put enemy-only requirements in ENEMY_REQUIREMENTS instead.
 export function getPrerequisiteText(upgrade, settings, owned) {
   if (RADAR_MODULES.includes(upgrade.name)) {
     return ownsUpgrade(owned, 'Radar') ? '' : 'Requires Radar';
@@ -49,7 +62,7 @@ export function getPrerequisiteText(upgrade, settings, owned) {
 
   switch (upgrade.name) {
     case 'Pocket Bell':
-      return ownsUpgrade(owned, 'Double Jump') ? '' : 'Requires Double Jump and Bell Enemy';
+      return ownsUpgrade(owned, 'Double Jump') ? '' : 'Requires Double Jump';
     case 'Panic Necklace':
       return ownsUpgrade(owned, 'Shield') ? '' : 'Requires Shield';
     case 'Subspacial Barrier':
@@ -61,7 +74,7 @@ export function getPrerequisiteText(upgrade, settings, owned) {
     case 'Drowned Ægis':
       return ownsUpgrade(owned, 'More Altars') ? '' : 'Requires More Altars';
     case 'Radar Module: Instruments':
-      return ownsUpgrade(owned, 'Radar') ? '' : 'Requires Radar and Cadence';
+      return ownsUpgrade(owned, 'Radar') ? '' : 'Requires Radar';
     case 'Aggro Magnet':
       return ownsUpgrade(owned, 'Gift Magnet') ? '' : 'Requires Gift Magnet';
     case 'Debuff Magnet':
