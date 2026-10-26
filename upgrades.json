@@ -180,11 +180,11 @@
     "description": "Gives the player a unique buff according to their class.",
     "image": "assets/ninja-belt.png",
     "cost": 600,
+    "costSolo": 500,
     "costCasual": 500,
     "costSoloExtreme": 525,
     "max": 1,
-    "minLevel": 13,
-    "costSolo": 500
+    "minLevel": 13
   },
   {
     "name": "Larger Grapple Points",
