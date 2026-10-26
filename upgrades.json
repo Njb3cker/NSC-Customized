@@ -7,6 +7,7 @@
     "stackCosts": [75, 160, 160],
     "stackCostsSolo": [75, 150, 150],
     "stackCostsSoloCasual": [50, 100, 100],
+    "stackCostsExtreme": [100, 200, 200],
     "max": 2,
     "minLevel": 3
   },
@@ -56,6 +57,8 @@
     "image": "assets/double-jump.png",
     "cost": 150,
     "costSoloCasual": 125,
+    "costExtreme": 175,
+    "costSoloExtreme": 150,
     "max": 1,
     "minLevel": 5
   },
