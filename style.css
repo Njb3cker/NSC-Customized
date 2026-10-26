@@ -539,6 +539,11 @@ section {
   color: #f5d0fe;
 }
 
+.footer-credit {
+  display: block;
+  margin-top: 4px;
+}
+
 .footer-note {
   margin: 10px 0 0;
   color: #e9d5ff;
