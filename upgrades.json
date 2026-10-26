@@ -35,6 +35,7 @@
     "cost": 150,
     "costSolo": 125,
     "costCasual": 125,
+    "costExtreme": 175,
     "costSoloCasual": 100,
     "costSoloExtreme": 150,
     "max": 1,
@@ -128,6 +129,7 @@
     "costSolo": 600,
     "costCasual": 500,
     "costSoloCasual": 500,
+    "costExtreme": 725,
     "max": 1,
     "minLevel": 8
   },
@@ -149,6 +151,7 @@
     "cost": 300,
     "costSolo": 275,
     "costCasual": 250,
+    "costExtreme": 350,
     "costSoloCasual": 250,
     "max": 1,
     "minLevel": 8
@@ -411,6 +414,7 @@
     "image": "assets/soul-tracers.png",
     "cost": 1000,
     "costSolo": 600,
+    "costSoloCasual": 400,
     "max": 1,
     "minLevel": 13
   },
@@ -429,6 +433,7 @@
     "stackCosts": [525, 1250, 1250],
     "stackCostsCasual": [475, 950, 950],
     "stackCostsSolo": [500, 1000, 1000],
+    "stackCostsExtreme": [600, 1200, 1200],
     "stackCostsSoloCasual": [450, 900, 900],
     "stackCostsSoloExtreme": [600, 1200, 1200],
     "max": 2,
@@ -448,6 +453,7 @@
     "image": "assets/fleeting-fate.png",
     "cost": 2500,
     "costCasual": 1750,
+    "costSoloCasual": 1500,
     "max": 1,
     "minLevel": 18
   },
