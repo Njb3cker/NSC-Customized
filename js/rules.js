@@ -96,6 +96,8 @@ export function shouldShowUpgrade(upgrade, settings) {
       return settings.playerCount > 1;
     case 'Grace Wings':
       return settings.difficulty !== 'Casual';
+    case 'Miniature Hourglass':
+      return settings.difficulty !== 'Casual';
     case 'Health Insurance':
       return settings.playerCount > 2;
     default:
