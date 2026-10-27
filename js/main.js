@@ -99,6 +99,7 @@ playerCountInput.addEventListener('input', () => {
 });
 
 resetButton.addEventListener('click', resetAll);
+presetSelect.addEventListener('input', resetAll);
 purchaseItemsButton.addEventListener('click', purchase);
 initHowToUseModal();
 
