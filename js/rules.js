@@ -16,6 +16,17 @@ const EXCLUSIVE_GROUPS = [
   ['Fleeting Fate', 'Panic Necklace'],
 ];
 
+// Upgrades that never get the Arrogance / Conceit bonus stack.
+const NO_BONUS_STACK = ['Defuse Kit'];
+
+export function getMaxStacks(upgrade, settings) {
+  const getsBonusStack = settings.arroganceConceitDelusion &&
+    upgrade.max > 1 &&
+    !NO_BONUS_STACK.includes(upgrade.name);
+
+  return upgrade.max + (getsBonusStack ? 1 : 0);
+}
+
 function ownsUpgrade(owned, name, amount = 1) {
   return (owned.get(name) ?? 0) >= amount;
 }
@@ -41,7 +52,21 @@ export function meetsLevelRequirement(upgrade, settings) {
   return settings.currentLevel >= getEffectiveMinLevel(upgrade, settings.difficulty);
 }
 
+const ENEMY_REQUIREMENTS = {
+  'Pocket Bell': ['Bell'],
+  'Radar Module: Instruments': ['Cadence'],
+  'Star Marts': ['Mart'],
+  'Birthday Pony': ['Springer'],
+  'Spring Shoes' : ['Springer'],
+  'Jet Boosters': ['Scrapmaw'],
+};
+
+export function getEnemyRequirements(upgradeName) {
+  return ENEMY_REQUIREMENTS[upgradeName] ?? [];
+}
+
 // Returns '' when the prerequisite is met, otherwise text describing what is missing.
+// Any text returned here hides the upgrade from the shop; put enemy-only requirements in ENEMY_REQUIREMENTS instead.
 export function getPrerequisiteText(upgrade, settings, owned) {
   if (RADAR_MODULES.includes(upgrade.name)) {
     return ownsUpgrade(owned, 'Radar') ? '' : 'Requires Radar';
@@ -49,7 +74,7 @@ export function getPrerequisiteText(upgrade, settings, owned) {
 
   switch (upgrade.name) {
     case 'Pocket Bell':
-      return ownsUpgrade(owned, 'Double Jump') ? '' : 'Requires Double Jump and Bell Enemy';
+      return ownsUpgrade(owned, 'Double Jump') ? '' : 'Requires Double Jump';
     case 'Panic Necklace':
       return ownsUpgrade(owned, 'Shield') ? '' : 'Requires Shield';
     case 'Subspacial Barrier':
@@ -61,7 +86,7 @@ export function getPrerequisiteText(upgrade, settings, owned) {
     case 'Drowned Ægis':
       return ownsUpgrade(owned, 'More Altars') ? '' : 'Requires More Altars';
     case 'Radar Module: Instruments':
-      return ownsUpgrade(owned, 'Radar') ? '' : 'Requires Radar and Cadence';
+      return ownsUpgrade(owned, 'Radar') ? '' : 'Requires Radar';
     case 'Aggro Magnet':
       return ownsUpgrade(owned, 'Gift Magnet') ? '' : 'Requires Gift Magnet';
     case 'Debuff Magnet':
@@ -72,8 +97,6 @@ export function getPrerequisiteText(upgrade, settings, owned) {
       return ownsUpgrade(owned, 'Paycheck') ? '' : 'Requires Paycheck';
     case 'Health Insurance':
       return ownsUpgrade(owned, 'Paycheck') ? '' : 'Requires Paycheck';
-    case 'Spring Shoes':
-      return  'Requires Springer Enemy';
     default:
       return '';
   }
@@ -101,7 +124,9 @@ export function shouldShowUpgrade(upgrade, settings) {
     case 'Miniature Hourglass':
       return settings.difficulty !== 'Casual';
     case 'Health Insurance':
-      return settings.playerCount > 2;
+      return settings.playerCount > 2 && settings.difficulty !== 'Extreme';
+    case 'Soul Tracers':
+      return settings.difficulty !== 'Extreme';
     default:
       return true;
   }
@@ -118,7 +143,7 @@ function isAvailableForShop(upgrade, settings, owned) {
     meetsLevelRequirement(upgrade, settings) &&
     isPrerequisiteMet(upgrade, settings, owned) &&
     !getOwnedRival(upgrade, owned) &&
-    (owned.get(upgrade.name) ?? 0) < upgrade.max;
+    (owned.get(upgrade.name) ?? 0) < getMaxStacks(upgrade, settings);
 }
 
 export function getShopItems(upgrades, settings, owned) {

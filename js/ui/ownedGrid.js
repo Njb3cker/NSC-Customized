@@ -1,5 +1,5 @@
 import { upgradeGrid } from '../dom.js';
-import { getVisibleSortedUpgrades, meetsLevelRequirement, isPrerequisiteMet, getOwnedRival } from '../rules.js';
+import { getVisibleSortedUpgrades, meetsLevelRequirement, isPrerequisiteMet, getOwnedRival, getMaxStacks } from '../rules.js';
 import { ownedUpgrades, getOwnedCount, cycleOwnedCount } from '../state.js';
 import { getUpgradeCost } from '../cart.js';
 import { showTooltip, hideTooltip, moveTooltip } from './tooltip.js';
@@ -17,13 +17,14 @@ export function renderOwnedGrid(upgrades, settings, onChange) {
     const affordable = settings.currentMoney >= adjustedCost && availableByLevel;
     const prerequisiteMet = isPrerequisiteMet(upgrade, settings, ownedUpgrades);
     const owned = getOwnedCount(upgrade.name);
+    const maxStacks = getMaxStacks(upgrade, settings);
 
     const card = document.createElement('button');
     card.type = 'button';
     card.className = 'upgrade-card';
     card.setAttribute(
       'aria-label',
-      `${upgrade.name}, cost ${adjustedCost}, owned ${owned} of ${upgrade.max}`
+      `${upgrade.name}, cost ${adjustedCost}, owned ${owned} of ${maxStacks}`
     );
 
     card.classList.toggle('locked', !affordable);
@@ -31,7 +32,7 @@ export function renderOwnedGrid(upgrades, settings, onChange) {
     card.classList.toggle('missing-prerequisite', !prerequisiteMet);
     card.classList.toggle('excluded', getOwnedRival(upgrade, ownedUpgrades) !== null);
     card.classList.toggle('owned', owned > 0);
-    card.classList.toggle('fully-owned', owned >= upgrade.max);
+    card.classList.toggle('fully-owned', owned >= maxStacks);
 
     const image = document.createElement('img');
     image.src = upgrade.image;
@@ -47,10 +48,10 @@ export function renderOwnedGrid(upgrades, settings, onChange) {
     card.appendChild(image);
     card.appendChild(cost);
 
-    if (owned > 0 && upgrade.max > 1) {
+    if (owned > 0 && maxStacks > 1) {
       const ownedBadge = document.createElement('span');
       ownedBadge.className = 'upgrade-owned';
-      ownedBadge.textContent = `${owned}/${upgrade.max}`;
+      ownedBadge.textContent = `${owned}/${maxStacks}`;
       card.appendChild(ownedBadge);
     }
 
@@ -61,7 +62,7 @@ export function renderOwnedGrid(upgrades, settings, onChange) {
     }
 
     card.addEventListener('click', () => {
-      cycleOwnedCount(upgrade);
+      cycleOwnedCount(upgrade, maxStacks);
       onChange();
     });
 

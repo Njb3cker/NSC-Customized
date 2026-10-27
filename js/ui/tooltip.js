@@ -1,9 +1,9 @@
 import { tooltip } from '../dom.js';
 import { getBaseUpgradeCost } from '../pricing/upgrades.js';
-import { getEffectiveMinLevel, getPrerequisiteText, getExclusiveRivals } from '../rules.js';
+import { getEffectiveMinLevel, getPrerequisiteText, getExclusiveRivals, getEnemyRequirements, getMaxStacks } from '../rules.js';
 import { getCurrentSettings } from '../settings.js';
 import { ownedUpgrades, getOwnedCount } from '../state.js';
-import { getUpgradeCost } from '../cart.js';
+import { getUpgradeCost, getPricedStack } from '../cart.js';
 
 const CURSOR_OFFSET = 14;
 
@@ -12,19 +12,21 @@ let activeUpgrade = null;
 export function showTooltip(upgrade) {
   const settings = getCurrentSettings();
   const owned = getOwnedCount(upgrade.name);
-  const baseCost = getBaseUpgradeCost(upgrade, owned, settings);
+  const baseCost = getBaseUpgradeCost(upgrade, getPricedStack(upgrade, settings), settings);
   const adjustedCost = getUpgradeCost(upgrade, settings);
   const prerequisiteText = getPrerequisiteText(upgrade, settings, ownedUpgrades);
   const rivals = getExclusiveRivals(upgrade.name);
+  const enemies = getEnemyRequirements(upgrade.name);
 
   tooltip.innerHTML = `
     <h3>${upgrade.name}</h3>
     <p><strong>Base cost:</strong> ${baseCost}</p>
     <p><strong>Cost:</strong> ${adjustedCost}</p>
-    <p><strong>Owned:</strong> ${owned}/${upgrade.max}</p>
-    <p><strong>Max:</strong> ${upgrade.max}</p>
+    <p><strong>Owned:</strong> ${owned}/${getMaxStacks(upgrade, settings)}</p>
+    <p><strong>Max:</strong> ${getMaxStacks(upgrade, settings)}</p>
     <p><strong>Min level:</strong> ${getEffectiveMinLevel(upgrade, settings.difficulty)}</p>
     ${prerequisiteText ? `<p><strong>Requirement:</strong> ${prerequisiteText}</p>` : ''}
+    ${enemies.length ? `<p><strong>Requires enemy:</strong> ${enemies.join(', ')}</p>` : ''}
     ${rivals.length ? `<p><strong>Exclusive with:</strong> ${rivals.join(', ')}</p>` : ''}
     <p>${upgrade.description}</p>
   `;

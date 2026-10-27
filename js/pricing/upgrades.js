@@ -1,4 +1,5 @@
-const PARTY_PLUS_DIVISOR = 1.125;
+// Party+ prices used to be divided by 1.125; the update removed that, so Party+ is now plain base * sqrt(players).
+const PARTY_PLUS_DIVISOR = 1;
 const NOTHING_CURSE_MULTIPLIER = 0.85;
 
 function getEffectivePartySize(playerCount, partySize) {

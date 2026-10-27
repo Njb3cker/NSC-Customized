@@ -2,7 +2,7 @@
 import { getAdjustedCost } from './pricing/upgrades.js';
 import { getProtectionAltarCost } from './pricing/altars.js';
 import { getPurificationCost } from './pricing/purification.js';
-import { getShopItems, getNextShopLevel } from './rules.js';
+import { getShopItems, getNextShopLevel, getMaxStacks } from './rules.js';
 import {
   catalog,
   ownedUpgrades,
@@ -14,8 +14,14 @@ import {
   getOwnedCount,
 } from './state.js';
 
+// Which stack an upgrade's displayed price is for: the next one to buy, or the last one once maxed out
+// (so a maxed upgrade keeps its price instead of showing a stack it can't have, like the Arrogance / Conceit bonus stack).
+export function getPricedStack(upgrade, settings) {
+  return Math.min(getOwnedCount(upgrade.name), getMaxStacks(upgrade, settings) - 1);
+}
+
 export function getUpgradeCost(upgrade, settings) {
-  return getAdjustedCost(upgrade, getOwnedCount(upgrade.name), settings);
+  return getAdjustedCost(upgrade, getPricedStack(upgrade, settings), settings);
 }
 
 export function getCurseCost(curse, settings) {
@@ -126,7 +132,7 @@ export function purchaseSelectedItems(settings) {
 
     const currentOwned = getOwnedCount(upgrade.name);
 
-    if (currentOwned < upgrade.max) {
+    if (currentOwned < getMaxStacks(upgrade, settings)) {
       ownedUpgrades.set(upgrade.name, currentOwned + 1);
     }
   });

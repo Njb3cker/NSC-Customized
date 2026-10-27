@@ -76,7 +76,7 @@
               Party Size
               <span
                 class="help-mark"
-                title="Solo lobbies get specific discounts on items like Shield and Ice Skates. Party+ gets a universal ~11.11% discount."
+                title="Solo lobbies get specific discounts on items like Shield and Ice Skates."
               >(?)</span>
             </label>
             <select id="party-size" name="party-size">
@@ -126,7 +126,33 @@
       </footer>
       
       <section class="upgrades" aria-labelledby="upgrades-heading">
-        <h2 id="upgrades-heading">Owned Upgrades</h2>
+        <div class="upgrades-header">
+          <h2 id="upgrades-heading">Owned Upgrades</h2>
+
+          <label
+            for="arrogance-conceit-delusion"
+            class="curse-control"
+            title="Arrogance / Conceit: every stackable upgrade except Defuse Kit gets one extra stack."
+          >
+            <input id="arrogance-conceit-delusion" name="arrogance-conceit-delusion" type="checkbox">
+            <img
+              src="assets/arrogance.png"
+              alt="Arrogance delusion"
+              width="32"
+              height="32"
+              loading="lazy"
+            >
+            <span class="delusion-separator" aria-hidden="true">/</span>
+            <img
+              src="assets/conceit.png"
+              alt="Conceit delusion"
+              width="32"
+              height="32"
+              loading="lazy"
+            >
+          </label>
+        </div>
+
         <div class="upgrade-grid" id="upgrade-grid"></div>
       </section>
 
@@ -178,7 +204,7 @@
         >
           <input id="dependence-delusion" name="dependence-delusion" type="checkbox">
           <img
-            src="assets/placeholder.png"
+            src="assets/dependence.png"
             alt="Dependence delusion"
             width="32"
             height="32"
@@ -268,6 +294,15 @@
             target="_blank"
             rel="noopener noreferrer"
           >Sticks</a>
+        </small>
+
+        <small class="footer-credit">
+          Shoutouts to Alireza for providing a ton of pricing data! Check out their
+          <a
+            href="https://alireza1303.github.io/nullscape_Price/prices.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >calculator</a>!
         </small>
 
         <p class="footer-note">
