@@ -377,7 +377,7 @@
     "image": "assets/defuse-kit.png",
     "cost": 30,
     "max": 3,
-    "minLevel": 3
+    "minLevel": 5
   },
   {
     "name": "Final Stand",
